@@ -1,0 +1,1434 @@
+Fitter report for First_project
+Wed Sep 10 20:18:05 2014
+Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. I/O Bank Usage
+ 10. All Package Pins
+ 11. Output Pin Default Load For Reported TCO
+ 12. Fitter Resource Utilization by Entity
+ 13. Delay Chain Summary
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Interconnect Usage Summary
+ 18. LAB Logic Elements
+ 19. LAB-wide Signals
+ 20. LAB Signals Sourced
+ 21. LAB Signals Sourced Out
+ 22. LAB Distinct Inputs
+ 23. Fitter Device Options
+ 24. Fitter Messages
+ 25. Fitter Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Fitter Summary                                                             ;
++---------------------------+------------------------------------------------+
+; Fitter Status             ; Successful - Wed Sep 10 20:18:04 2014          ;
+; Quartus II 32-bit Version ; 11.1 Build 216 11/23/2011 SP 1 SJ Full Version ;
+; Revision Name             ; First_project                                  ;
+; Top-level Entity Name     ; First_project                                  ;
+; Family                    ; MAX II                                         ;
+; Device                    ; EPM570T100C5                                   ;
+; Timing Models             ; Final                                          ;
+; Total logic elements      ; 493 / 570 ( 86 % )                             ;
+; Total pins                ; 28 / 76 ( 37 % )                               ;
+; Total virtual pins        ; 0                                              ;
+; UFM blocks                ; 0 / 1 ( 0 % )                                  ;
++---------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                              ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Option                                                                     ; Setting                        ; Default Value                  ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Device                                                                     ; EPM570T100C5                   ;                                ;
+; Minimum Core Junction Temperature                                          ; 0                              ;                                ;
+; Maximum Core Junction Temperature                                          ; 85                             ;                                ;
+; Fit Attempts to Skip                                                       ; 0                              ; 0.0                            ;
+; Device I/O Standard                                                        ; 3.3-V LVTTL                    ;                                ;
+; Use smart compilation                                                      ; Off                            ; Off                            ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                             ; On                             ;
+; Enable compact report table                                                ; Off                            ; Off                            ;
+; Router Timing Optimization Level                                           ; Normal                         ; Normal                         ;
+; Placement Effort Multiplier                                                ; 1.0                            ; 1.0                            ;
+; Router Effort Multiplier                                                   ; 1.0                            ; 1.0                            ;
+; Always Enable Input Buffers                                                ; Off                            ; Off                            ;
+; Optimize Hold Timing                                                       ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
+; Optimize Multi-Corner Timing                                               ; Off                            ; Off                            ;
+; Guarantee I/O Paths Have Zero Hold Time at Fast Corner                     ; On                             ; On                             ;
+; PowerPlay Power Optimization                                               ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing                                                            ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing for ECOs                                                   ; Off                            ; Off                            ;
+; Regenerate full fit report during ECO compiles                             ; Off                            ; Off                            ;
+; Optimize IOC Register Placement for Timing                                 ; Normal                         ; Normal                         ;
+; Limit to One Fitting Attempt                                               ; Off                            ; Off                            ;
+; Final Placement Optimizations                                              ; Automatically                  ; Automatically                  ;
+; Fitter Aggressive Routability Optimizations                                ; Automatically                  ; Automatically                  ;
+; Fitter Initial Placement Seed                                              ; 1                              ; 1                              ;
+; Slow Slew Rate                                                             ; Off                            ; Off                            ;
+; PCI I/O                                                                    ; Off                            ; Off                            ;
+; Weak Pull-Up Resistor                                                      ; Off                            ; Off                            ;
+; Enable Bus-Hold Circuitry                                                  ; Off                            ; Off                            ;
+; Auto Delay Chains                                                          ; On                             ; On                             ;
+; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                            ; Off                            ;
+; Perform Register Duplication for Performance                               ; Off                            ; Off                            ;
+; Perform Register Retiming for Performance                                  ; Off                            ; Off                            ;
+; Perform Asynchronous Signal Pipelining                                     ; Off                            ; Off                            ;
+; Fitter Effort                                                              ; Auto Fit                       ; Auto Fit                       ;
+; Physical Synthesis Effort Level                                            ; Normal                         ; Normal                         ;
+; Logic Cell Insertion - Logic Duplication                                   ; Auto                           ; Auto                           ;
+; Auto Register Duplication                                                  ; Auto                           ; Auto                           ;
+; Auto Global Clock                                                          ; On                             ; On                             ;
+; Auto Global Register Control Signals                                       ; On                             ; On                             ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                            ; Off                            ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 3.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;  33.3%      ;
++----------------------------+-------------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/CPLD project/CPLD project/First_project.pin.
+
+
++---------------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                               ;
++---------------------------------------------+-----------------------------------------------+
+; Resource                                    ; Usage                                         ;
++---------------------------------------------+-----------------------------------------------+
+; Total logic elements                        ; 493 / 570 ( 86 % )                            ;
+;     -- Combinational with no register       ; 259                                           ;
+;     -- Register only                        ; 118                                           ;
+;     -- Combinational with a register        ; 116                                           ;
+;                                             ;                                               ;
+; Logic element usage by number of LUT inputs ;                                               ;
+;     -- 4 input functions                    ; 81                                            ;
+;     -- 3 input functions                    ; 188                                           ;
+;     -- 2 input functions                    ; 98                                            ;
+;     -- 1 input functions                    ; 8                                             ;
+;     -- 0 input functions                    ; 0                                             ;
+;                                             ;                                               ;
+; Logic elements by mode                      ;                                               ;
+;     -- normal mode                          ; 320                                           ;
+;     -- arithmetic mode                      ; 173                                           ;
+;     -- qfbk mode                            ; 22                                            ;
+;     -- register cascade mode                ; 0                                             ;
+;     -- synchronous clear/load mode          ; 106                                           ;
+;     -- asynchronous clear/load mode         ; 0                                             ;
+;                                             ;                                               ;
+; Total registers                             ; 234 / 570 ( 41 % )                            ;
+; Total LABs                                  ; 56 / 57 ( 98 % )                              ;
+; Logic elements in carry chains              ; 191                                           ;
+; User inserted logic elements                ; 0                                             ;
+; Virtual pins                                ; 0                                             ;
+; I/O pins                                    ; 28 / 76 ( 37 % )                              ;
+;     -- Clock pins                           ; 1 / 4 ( 25 % )                                ;
+; Global signals                              ; 4                                             ;
+; UFM blocks                                  ; 0 / 1 ( 0 % )                                 ;
+; Global clocks                               ; 4 / 4 ( 100 % )                               ;
+; JTAGs                                       ; 0 / 1 ( 0 % )                                 ;
+; Average interconnect usage (total/H/V)      ; 30% / 38% / 21%                               ;
+; Peak interconnect usage (total/H/V)         ; 30% / 38% / 21%                               ;
+; Maximum fan-out node                        ; clk50M                                        ;
+; Maximum fan-out                             ; 146                                           ;
+; Highest non-global fan-out signal           ; SPI_slave:SPI_MODULE|byte_data_received[15]~0 ;
+; Highest non-global fan-out                  ; 88                                            ;
+; Total fan-out                               ; 1698                                          ;
+; Average fan-out                             ; 3.26                                          ;
++---------------------------------------------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                    ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
+; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
+; MOSI   ; 48    ; 1        ; 10           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; SCK    ; 49    ; 1        ; 10           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; SSEL   ; 47    ; 1        ; 10           ; 0            ; 2           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; clk50M ; 12    ; 1        ; 0            ; 5            ; 0           ; 146                   ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ;
+; key0   ; 6     ; 1        ; 0            ; 7            ; 3           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                     ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+; Data_H        ; 28    ; 1        ; 4            ; 3            ; 3           ; no              ; no             ; no              ; no         ; yes           ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; MISO          ; 19    ; 1        ; 0            ; 4            ; 5           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; OUT[0]        ; 78    ; 2        ; 12           ; 8            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; OUT[1]        ; 83    ; 2        ; 8            ; 8            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; OUT[2]        ; 67    ; 2        ; 13           ; 4            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; OUT[3]        ; 44    ; 1        ; 8            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; OUT_final[0]  ; 15    ; 1        ; 0            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; OUT_final[1]  ; 16    ; 1        ; 0            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; OUT_final[2]  ; 17    ; 1        ; 0            ; 5            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; OUT_final[3]  ; 18    ; 1        ; 0            ; 5            ; 5           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out       ; 33    ; 1        ; 6            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out2      ; 34    ; 1        ; 6            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out3      ; 35    ; 1        ; 6            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out4      ; 36    ; 1        ; 6            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out5      ; 38    ; 1        ; 7            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out6      ; 40    ; 1        ; 7            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out7      ; 26    ; 1        ; 3            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out8      ; 30    ; 1        ; 4            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out9      ; 50    ; 1        ; 11           ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; PWM_out_vent  ; 55    ; 2        ; 13           ; 2            ; 4           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; flag_five_sec ; 54    ; 2        ; 13           ; 1            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led0          ; 2     ; 1        ; 1            ; 8            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; led1          ; 3     ; 1        ; 1            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+
+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 23 / 36 ( 64 % ) ; 3.3V          ; --           ;
+; 2        ; 5 / 40 ( 13 % )  ; 3.3V          ; --           ;
++----------+------------------+---------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                                               ;
++----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage   ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
++----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
+; 1        ; 161        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 2        ; 2          ; 1        ; led0           ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 3        ; 4          ; 1        ; led1           ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 4        ; 6          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 5        ; 8          ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 6        ; 9          ; 1        ; key0           ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 7        ; 10         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 8        ; 11         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 9        ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 10       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 11       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 12       ; 20         ; 1        ; clk50M         ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 13       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
+; 14       ; 21         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 15       ; 22         ; 1        ; OUT_final[0]   ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 16       ; 23         ; 1        ; OUT_final[1]   ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 17       ; 24         ; 1        ; OUT_final[2]   ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 18       ; 25         ; 1        ; OUT_final[3]   ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 19       ; 32         ; 1        ; MISO           ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 20       ; 34         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 21       ; 36         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 22       ; 38         ; 1        ; #TMS           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
+; 23       ; 39         ; 1        ; #TDI           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
+; 24       ; 40         ; 1        ; #TCK           ; input  ;              ;           ; --         ;                 ; --       ; --           ;
+; 25       ; 41         ; 1        ; #TDO           ; output ;              ;           ; --         ;                 ; --       ; --           ;
+; 26       ; 47         ; 1        ; PWM_out7       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 27       ; 48         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 28       ; 50         ; 1        ; Data_H         ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 29       ; 51         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 30       ; 52         ; 1        ; PWM_out8       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 31       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 32       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 33       ; 58         ; 1        ; PWM_out        ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 34       ; 59         ; 1        ; PWM_out2       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 35       ; 60         ; 1        ; PWM_out3       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 36       ; 61         ; 1        ; PWM_out4       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 37       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 38       ; 62         ; 1        ; PWM_out5       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 39       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
+; 40       ; 63         ; 1        ; PWM_out6       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 41       ; 64         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 42       ; 65         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 43       ; 66         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 44       ; 67         ; 1        ; OUT[3]         ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 45       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 46       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 47       ; 71         ; 1        ; SSEL           ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 48       ; 72         ; 1        ; MOSI           ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 49       ; 73         ; 1        ; SCK            ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 50       ; 75         ; 1        ; PWM_out9       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 51       ; 79         ; 1        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 52       ; 83         ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 53       ; 84         ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 54       ; 86         ; 2        ; flag_five_sec  ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 55       ; 89         ; 2        ; PWM_out_vent   ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 56       ; 91         ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 57       ; 92         ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 58       ; 93         ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 59       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 60       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 61       ; 98         ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 62       ; 101        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 63       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
+; 64       ; 102        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 65       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 66       ; 103        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 67       ; 104        ; 2        ; OUT[2]         ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 68       ; 105        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 69       ; 111        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 70       ; 112        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 71       ; 115        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 72       ; 116        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 73       ; 118        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 74       ; 120        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 75       ; 122        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 76       ; 125        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 77       ; 126        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 78       ; 127        ; 2        ; OUT[0]         ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 79       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 80       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 81       ; 135        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 82       ; 136        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 83       ; 139        ; 2        ; OUT[1]         ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 84       ; 140        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 85       ; 141        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 86       ; 142        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 87       ; 143        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 88       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
+; 89       ; 144        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 90       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 91       ; 149        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 92       ; 150        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 93       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
+; 94       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
+; 95       ; 151        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 96       ; 152        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 97       ; 153        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 98       ; 155        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 99       ; 156        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 100      ; 158        ; 2        ; RESERVED_INPUT ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
++----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-------------------------------------------------------------+
+; Output Pin Default Load For Reported TCO                    ;
++----------------------------+-------+------------------------+
+; I/O Standard               ; Load  ; Termination Resistance ;
++----------------------------+-------+------------------------+
+; 3.3-V LVTTL                ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS               ; 10 pF ; Not Available          ;
+; 2.5 V                      ; 10 pF ; Not Available          ;
+; 1.8 V                      ; 10 pF ; Not Available          ;
+; 1.5 V                      ; 10 pF ; Not Available          ;
+; 3.3V Schmitt Trigger Input ; 10 pF ; Not Available          ;
+; 2.5V Schmitt Trigger Input ; 10 pF ; Not Available          ;
++----------------------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                 ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
+; |First_project             ; 493 (0)     ; 234          ; 0          ; 28   ; 0            ; 259 (0)      ; 118 (0)           ; 116 (0)          ; 191 (0)         ; 21 (0)     ; |First_project                      ; work         ;
+;    |Energy_saver:E_s|      ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |First_project|Energy_saver:E_s     ; work         ;
+;    |Humidity:Hum|          ; 113 (113)   ; 34           ; 0          ; 0    ; 0            ; 79 (79)      ; 0 (0)             ; 34 (34)          ; 21 (21)         ; 4 (4)      ; |First_project|Humidity:Hum         ; work         ;
+;    |PWM:p_w_m|             ; 88 (88)     ; 8            ; 0          ; 0    ; 0            ; 80 (80)      ; 0 (0)             ; 8 (8)            ; 87 (87)         ; 0 (0)      ; |First_project|PWM:p_w_m            ; work         ;
+;    |RELAY:RL|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |First_project|RELAY:RL             ; work         ;
+;    |SETPOS:STPS|           ; 36 (36)     ; 14           ; 0          ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 14 (14)          ; 28 (28)         ; 4 (4)      ; |First_project|SETPOS:STPS          ; work         ;
+;    |SPI_slave:SPI_MODULE|  ; 103 (103)   ; 103          ; 0          ; 0    ; 0            ; 0 (0)        ; 88 (88)           ; 15 (15)          ; 0 (0)           ; 3 (3)      ; |First_project|SPI_slave:SPI_MODULE ; work         ;
+;    |five_sec:F_S|          ; 49 (49)     ; 24           ; 0          ; 0    ; 0            ; 25 (25)      ; 4 (4)             ; 20 (20)          ; 23 (23)         ; 10 (10)    ; |First_project|five_sec:F_S         ; work         ;
+;    |freqdiv:FGD|           ; 89 (89)     ; 43           ; 0          ; 0    ; 0            ; 46 (46)      ; 26 (26)           ; 17 (17)          ; 32 (32)         ; 0 (0)      ; |First_project|freqdiv:FGD          ; work         ;
+;    |stepdirdriver:SDRV|    ; 10 (10)     ; 8            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |First_project|stepdirdriver:SDRV   ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------+
+; Delay Chain Summary                      ;
++---------------+----------+---------------+
+; Name          ; Pin Type ; Pad to Core 0 ;
++---------------+----------+---------------+
+; key0          ; Input    ; (1)           ;
+; clk50M        ; Input    ; (0)           ;
+; SSEL          ; Input    ; (1)           ;
+; SCK           ; Input    ; (1)           ;
+; MOSI          ; Input    ; (1)           ;
+; led0          ; Output   ; --            ;
+; led1          ; Output   ; --            ;
+; MISO          ; Output   ; --            ;
+; OUT[0]        ; Output   ; --            ;
+; OUT[1]        ; Output   ; --            ;
+; OUT[2]        ; Output   ; --            ;
+; OUT[3]        ; Output   ; --            ;
+; OUT_final[0]  ; Output   ; --            ;
+; OUT_final[1]  ; Output   ; --            ;
+; OUT_final[2]  ; Output   ; --            ;
+; OUT_final[3]  ; Output   ; --            ;
+; PWM_out       ; Output   ; --            ;
+; PWM_out2      ; Output   ; --            ;
+; PWM_out3      ; Output   ; --            ;
+; PWM_out4      ; Output   ; --            ;
+; PWM_out5      ; Output   ; --            ;
+; PWM_out6      ; Output   ; --            ;
+; PWM_out7      ; Output   ; --            ;
+; PWM_out8      ; Output   ; --            ;
+; PWM_out9      ; Output   ; --            ;
+; PWM_out_vent  ; Output   ; --            ;
+; Data_H        ; Output   ; --            ;
+; flag_five_sec ; Output   ; --            ;
++---------------+----------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                           ;
++-----------------------------------------------+--------------+---------+---------------+--------+----------------------+------------------+
+; Name                                          ; Location     ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ;
++-----------------------------------------------+--------------+---------+---------------+--------+----------------------+------------------+
+; Humidity:Hum|Data_H_REG~3                     ; LC_X2_Y6_N0  ; 2       ; Clock enable  ; no     ; --                   ; --               ;
+; Humidity:Hum|Data_H_REG~en                    ; LC_X3_Y6_N0  ; 2       ; Output enable ; no     ; --                   ; --               ;
+; Humidity:Hum|id_gorb[0]~10                    ; LC_X2_Y4_N7  ; 5       ; Clock enable  ; no     ; --                   ; --               ;
+; Humidity:Hum|mstate~13                        ; LC_X4_Y7_N8  ; 18      ; Sync. load    ; no     ; --                   ; --               ;
+; Humidity:Hum|mstate~15                        ; LC_X1_Y6_N5  ; 22      ; Clock enable  ; no     ; --                   ; --               ;
+; Humidity:Hum|mstate~20                        ; LC_X3_Y6_N0  ; 8       ; Sync. clear   ; no     ; --                   ; --               ;
+; RELAY:RL|Q                                    ; LC_X12_Y2_N8 ; 8       ; Clock         ; no     ; --                   ; --               ;
+; SETPOS:STPS|angle_current[2]~22               ; LC_X11_Y4_N8 ; 11      ; Clock enable  ; no     ; --                   ; --               ;
+; SPI_slave:SPI_MODULE|HYM_send[6]~1            ; LC_X10_Y5_N1 ; 7       ; Clock enable  ; no     ; --                   ; --               ;
+; SPI_slave:SPI_MODULE|byte_data_received[15]~0 ; LC_X10_Y5_N2 ; 88      ; Clock enable  ; no     ; --                   ; --               ;
+; clk50M                                        ; PIN_12       ; 146     ; Clock         ; yes    ; Global Clock         ; GCLK0            ;
+; freqdiv:FGD|clk1M                             ; LC_X10_Y3_N7 ; 59      ; Clock         ; yes    ; Global Clock         ; GCLK3            ;
+; freqdiv:FGD|clk1hz                            ; LC_X9_Y4_N3  ; 17      ; Clock         ; yes    ; Global Clock         ; GCLK1            ;
+; freqdiv:FGD|clk25M                            ; LC_X6_Y6_N6  ; 9       ; Clock         ; yes    ; Global Clock         ; GCLK2            ;
+; stepdirdriver:SDRV|state~1                    ; LC_X12_Y2_N3 ; 5       ; Clock enable  ; no     ; --                   ; --               ;
++-----------------------------------------------+--------------+---------+---------------+--------+----------------------+------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                           ;
++--------------------+--------------+---------+----------------------+------------------+
+; Name               ; Location     ; Fan-Out ; Global Resource Used ; Global Line Name ;
++--------------------+--------------+---------+----------------------+------------------+
+; clk50M             ; PIN_12       ; 146     ; Global Clock         ; GCLK0            ;
+; freqdiv:FGD|clk1M  ; LC_X10_Y3_N7 ; 59      ; Global Clock         ; GCLK3            ;
+; freqdiv:FGD|clk1hz ; LC_X9_Y4_N3  ; 17      ; Global Clock         ; GCLK1            ;
+; freqdiv:FGD|clk25M ; LC_X6_Y6_N6  ; 9       ; Global Clock         ; GCLK2            ;
++--------------------+--------------+---------+----------------------+------------------+
+
+
++---------------------------------------------------------+
+; Non-Global High Fan-Out Signals                         ;
++-----------------------------------------------+---------+
+; Name                                          ; Fan-Out ;
++-----------------------------------------------+---------+
+; SPI_slave:SPI_MODULE|byte_data_received[15]~0 ; 88      ;
+; Humidity:Hum|protocol[1]                      ; 28      ;
+; Humidity:Hum|protocol[2]                      ; 27      ;
+; Humidity:Hum|mstate~15                        ; 23      ;
+; Humidity:Hum|Equal0~0                         ; 22      ;
+; Humidity:Hum|data_rec[1]                      ; 20      ;
+; Humidity:Hum|data_rec[2]                      ; 19      ;
+; Humidity:Hum|mstate~13                        ; 18      ;
+; SETPOS:STPS|LessThan0~0                       ; 13      ;
+; PWM:p_w_m|cnt[0]                              ; 12      ;
+; PWM:p_w_m|cnt[1]                              ; 11      ;
+; PWM:p_w_m|cnt[2]                              ; 11      ;
+; PWM:p_w_m|cnt[3]                              ; 11      ;
+; PWM:p_w_m|cnt[4]                              ; 11      ;
+; PWM:p_w_m|cnt[5]                              ; 11      ;
+; PWM:p_w_m|cnt[6]                              ; 11      ;
+; SETPOS:STPS|angle_current[2]~22               ; 11      ;
+; PWM:p_w_m|cnt[7]                              ; 11      ;
+; five_sec:F_S|Equal0~7                         ; 10      ;
+; SPI_slave:SPI_MODULE|SCKr[1]                  ; 10      ;
+; SPI_slave:SPI_MODULE|SCKr[2]                  ; 9       ;
+; stepdirdriver:SDRV|state[0]                   ; 9       ;
+; SETPOS:STPS|DIR                               ; 9       ;
+; Humidity:Hum|mstate~20                        ; 8       ;
+; RELAY:RL|Q                                    ; 8       ;
+; freqdiv:FGD|z[0]                              ; 7       ;
+; stepdirdriver:SDRV|state[1]                   ; 7       ;
+; SPI_slave:SPI_MODULE|HYM_send[6]~1            ; 7       ;
+; freqdiv:FGD|Equal0~9                          ; 7       ;
+; freqdiv:FGD|Equal0~4                          ; 7       ;
+; Humidity:Hum|shet[2]                          ; 6       ;
+; Humidity:Hum|shet[4]                          ; 6       ;
+; stepdirdriver:SDRV|state[2]                   ; 6       ;
+; SETPOS:STPS|M_EN                              ; 6       ;
+; Humidity:Hum|id_gorb[0]~10                    ; 5       ;
+; Humidity:Hum|Add1~57                          ; 5       ;
+; Humidity:Hum|Add1~27                          ; 5       ;
+; five_sec:F_S|Add0~87                          ; 5       ;
+; five_sec:F_S|Add0~67                          ; 5       ;
+; five_sec:F_S|Add0~37                          ; 5       ;
+; five_sec:F_S|Add0~27                          ; 5       ;
+; Humidity:Hum|shet~9                           ; 5       ;
+; Humidity:Hum|shet~8                           ; 5       ;
+; Humidity:Hum|shet[0]                          ; 5       ;
+; Humidity:Hum|shet[3]                          ; 5       ;
+; Humidity:Hum|shet[5]                          ; 5       ;
+; Humidity:Hum|shet[10]                         ; 5       ;
+; Humidity:Hum|shet[9]                          ; 5       ;
+; Humidity:Hum|mstate.001                       ; 5       ;
+; SETPOS:STPS|angle_current[4]~5                ; 5       ;
+; SETPOS:STPS|dev_state                         ; 5       ;
+; stepdirdriver:SDRV|state~1                    ; 5       ;
+; freqdiv:FGD|Add0~127                          ; 5       ;
+; freqdiv:FGD|Add0~102                          ; 5       ;
+; freqdiv:FGD|Add0~67                           ; 5       ;
+; freqdiv:FGD|Add0~52                           ; 5       ;
+; freqdiv:FGD|Add0~32                           ; 5       ;
+; freqdiv:FGD|Add0~2                            ; 5       ;
+; key0                                          ; 4       ;
+; SETPOS:STPS|LessThan1~22                      ; 4       ;
+; freqdiv:FGD|z[1]                              ; 4       ;
+; freqdiv:FGD|z[3]                              ; 4       ;
+; Humidity:Hum|Equal5~0                         ; 4       ;
+; Humidity:Hum|shet~7                           ; 4       ;
+; Humidity:Hum|shet[1]                          ; 4       ;
+; Humidity:Hum|shet~5                           ; 4       ;
+; Humidity:Hum|shet[6]                          ; 4       ;
+; Humidity:Hum|shet[8]                          ; 4       ;
+; Humidity:Hum|shet[11]                         ; 4       ;
+; freqdiv:FGD|i[0]                              ; 4       ;
+; SETPOS:STPS|angle_current[7]                  ; 4       ;
+; SETPOS:STPS|angle_current[8]                  ; 4       ;
+; SPI_slave:SPI_MODULE|byte_data_received[5]    ; 4       ;
+; SETPOS:STPS|angle_current[5]                  ; 4       ;
+; SETPOS:STPS|angle_current[6]                  ; 4       ;
+; SPI_slave:SPI_MODULE|byte_data_received[3]    ; 4       ;
+; SETPOS:STPS|angle_current[3]                  ; 4       ;
+; SETPOS:STPS|angle_current[4]                  ; 4       ;
+; SPI_slave:SPI_MODULE|byte_data_received[1]    ; 4       ;
+; SETPOS:STPS|angle_current[9]                  ; 4       ;
+; SETPOS:STPS|angle_current[10]                 ; 4       ;
+; SPI_slave:SPI_MODULE|byte_data_received[7]    ; 4       ;
+; SSEL                                          ; 3       ;
+; Humidity:Hum|id_gorb[0]                       ; 3       ;
+; PWM:p_w_m|cnt[4]~7                            ; 3       ;
+; SETPOS:STPS|LessThan0~17                      ; 3       ;
+; Humidity:Hum|Add1~17                          ; 3       ;
+; PWM:p_w_m|LessThan9~17                        ; 3       ;
+; PWM:p_w_m|LessThan8~17                        ; 3       ;
+; PWM:p_w_m|LessThan7~17                        ; 3       ;
+; PWM:p_w_m|LessThan6~17                        ; 3       ;
+; PWM:p_w_m|LessThan5~17                        ; 3       ;
+; PWM:p_w_m|LessThan4~17                        ; 3       ;
+; PWM:p_w_m|LessThan3~17                        ; 3       ;
+; PWM:p_w_m|LessThan2~17                        ; 3       ;
+; PWM:p_w_m|LessThan1~17                        ; 3       ;
+; PWM:p_w_m|LessThan0~17                        ; 3       ;
+; freqdiv:FGD|j[1]                              ; 3       ;
+; freqdiv:FGD|j[2]                              ; 3       ;
+; freqdiv:FGD|Add2~2                            ; 3       ;
+; freqdiv:FGD|Equal2~0                          ; 3       ;
+; freqdiv:FGD|Add2~1                            ; 3       ;
+; freqdiv:FGD|Add2~0                            ; 3       ;
+; freqdiv:FGD|z[2]                              ; 3       ;
+; Humidity:Hum|Equal3~5                         ; 3       ;
+; Humidity:Hum|shet~6                           ; 3       ;
+; Humidity:Hum|shet~4                           ; 3       ;
+; Humidity:Hum|shet[14]                         ; 3       ;
+; Humidity:Hum|shet[7]                          ; 3       ;
+; Humidity:Hum|shet[15]                         ; 3       ;
+; Humidity:Hum|shet[12]                         ; 3       ;
+; Humidity:Hum|shet[13]                         ; 3       ;
+; five_sec:F_S|five_sec[22]                     ; 3       ;
+; five_sec:F_S|five_sec[19]                     ; 3       ;
+; five_sec:F_S|five_sec[14]                     ; 3       ;
+; five_sec:F_S|five_sec[11]                     ; 3       ;
+; five_sec:F_S|five_sec[6]                      ; 3       ;
+; five_sec:F_S|five_sec[9]                      ; 3       ;
+; SETPOS:STPS|LessThan1~0                       ; 3       ;
+; SPI_slave:SPI_MODULE|byte_data_received[4]    ; 3       ;
+; SPI_slave:SPI_MODULE|byte_data_received[2]    ; 3       ;
+; SPI_slave:SPI_MODULE|byte_data_received[0]    ; 3       ;
+; SPI_slave:SPI_MODULE|byte_data_received[6]    ; 3       ;
+; five_sec:F_S|flag_five_sec                    ; 3       ;
+; Humidity:Hum|Data_H_REG~en                    ; 2       ;
+; Humidity:Hum|HYM[0]                           ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[80]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[72]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[64]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[56]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[48]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[40]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[32]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[24]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[16]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[8]    ; 2       ;
+; Humidity:Hum|HYM2[0]                          ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[81]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[73]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[65]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[57]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[49]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[41]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[33]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[25]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[17]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[9]    ; 2       ;
+; SPI_slave:SPI_MODULE|HYM_send[0]              ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[82]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[74]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[66]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[58]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[50]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[42]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[34]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[26]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[18]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[10]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[83]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[75]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[67]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[59]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[51]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[43]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[35]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[27]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[19]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[11]   ; 2       ;
+; Humidity:Hum|mstate~18                        ; 2       ;
+; Humidity:Hum|always1~9                        ; 2       ;
+; Humidity:Hum|always1~7                        ; 2       ;
+; Humidity:Hum|LessThan3~0                      ; 2       ;
+; Humidity:Hum|always1~2                        ; 2       ;
+; Humidity:Hum|id_gorb[3]                       ; 2       ;
+; Humidity:Hum|id_gorb[2]                       ; 2       ;
+; Humidity:Hum|id_gorb[1]                       ; 2       ;
+; Humidity:Hum|id_gorb[5]                       ; 2       ;
+; Humidity:Hum|id_gorb[4]                       ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[84]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[76]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[68]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[60]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[52]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[44]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[36]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[28]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[20]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[12]   ; 2       ;
+; Humidity:Hum|Add1~75                          ; 2       ;
+; Humidity:Hum|Add1~70                          ; 2       ;
+; Humidity:Hum|Add1~65                          ; 2       ;
+; Humidity:Hum|Add1~60                          ; 2       ;
+; Humidity:Hum|Add1~55                          ; 2       ;
+; Humidity:Hum|Add1~50                          ; 2       ;
+; Humidity:Hum|shet~24                          ; 2       ;
+; Humidity:Hum|Add1~45                          ; 2       ;
+; Humidity:Hum|Add1~40                          ; 2       ;
+; Humidity:Hum|Add1~35                          ; 2       ;
+; Humidity:Hum|Add1~30                          ; 2       ;
+; Humidity:Hum|Add1~25                          ; 2       ;
+; Humidity:Hum|Add1~20                          ; 2       ;
+; Humidity:Hum|Add1~15                          ; 2       ;
+; Humidity:Hum|Add1~10                          ; 2       ;
+; Humidity:Hum|Add1~5                           ; 2       ;
+; Humidity:Hum|mstate.010                       ; 2       ;
+; Humidity:Hum|Add1~0                           ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[85]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[77]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[69]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[61]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[53]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[45]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[37]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[29]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[21]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[13]   ; 2       ;
+; freqdiv:FGD|Equal2~1                          ; 2       ;
+; freqdiv:FGD|z[4]                              ; 2       ;
+; five_sec:F_S|Add0~47                          ; 2       ;
+; Humidity:Hum|Data_H_REG~3                     ; 2       ;
+; Humidity:Hum|mstate~14                        ; 2       ;
+; Humidity:Hum|Equal3~1                         ; 2       ;
+; Humidity:Hum|shet~3                           ; 2       ;
+; Humidity:Hum|shet~2                           ; 2       ;
+; Humidity:Hum|shet~1                           ; 2       ;
+; Humidity:Hum|shet~0                           ; 2       ;
+; Humidity:Hum|Equal3~0                         ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[86]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[78]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[70]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[62]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[54]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[46]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[38]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[30]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[22]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[14]   ; 2       ;
+; five_sec:F_S|five_sec[21]                     ; 2       ;
+; five_sec:F_S|five_sec[13]                     ; 2       ;
+; five_sec:F_S|five_sec[7]                      ; 2       ;
+; five_sec:F_S|five_sec[17]                     ; 2       ;
+; five_sec:F_S|five_sec[5]                      ; 2       ;
+; five_sec:F_S|five_sec[10]                     ; 2       ;
+; five_sec:F_S|Equal0~3                         ; 2       ;
+; five_sec:F_S|five_sec[18]                     ; 2       ;
+; five_sec:F_S|five_sec[15]                     ; 2       ;
+; five_sec:F_S|five_sec[12]                     ; 2       ;
+; five_sec:F_S|five_sec[0]                      ; 2       ;
+; five_sec:F_S|five_sec[2]                      ; 2       ;
+; five_sec:F_S|five_sec[3]                      ; 2       ;
+; five_sec:F_S|five_sec[8]                      ; 2       ;
+; Humidity:Hum|Data_H_REG                       ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[79]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[71]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[63]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[55]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[47]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[39]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[31]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[23]   ; 2       ;
+; SPI_slave:SPI_MODULE|byte_data_received[15]   ; 2       ;
+; SETPOS:STPS|Equal0~3                          ; 2       ;
+; SETPOS:STPS|angle_current[2]                  ; 2       ;
+; SETPOS:STPS|angle_current[1]                  ; 2       ;
+; SETPOS:STPS|angle_current[0]                  ; 2       ;
+; freqdiv:FGD|Add0~155                          ; 2       ;
+; freqdiv:FGD|Add0~150                          ; 2       ;
+; freqdiv:FGD|Add0~145                          ; 2       ;
+; freqdiv:FGD|Add0~140                          ; 2       ;
+; freqdiv:FGD|Add0~135                          ; 2       ;
+; freqdiv:FGD|Add0~130                          ; 2       ;
+; freqdiv:FGD|Add0~125                          ; 2       ;
+; freqdiv:FGD|Add0~120                          ; 2       ;
+; freqdiv:FGD|Add0~115                          ; 2       ;
+; freqdiv:FGD|Add0~110                          ; 2       ;
+; freqdiv:FGD|Add0~105                          ; 2       ;
+; freqdiv:FGD|Add0~100                          ; 2       ;
+; freqdiv:FGD|Add0~95                           ; 2       ;
+; freqdiv:FGD|Add0~90                           ; 2       ;
+; freqdiv:FGD|Add0~85                           ; 2       ;
+; freqdiv:FGD|Add0~80                           ; 2       ;
+; freqdiv:FGD|Add0~75                           ; 2       ;
+; freqdiv:FGD|Add0~70                           ; 2       ;
+; freqdiv:FGD|Add0~65                           ; 2       ;
+; freqdiv:FGD|Add0~60                           ; 2       ;
+; freqdiv:FGD|Add0~55                           ; 2       ;
+; freqdiv:FGD|Add0~50                           ; 2       ;
+; freqdiv:FGD|Add0~45                           ; 2       ;
+; freqdiv:FGD|Add0~40                           ; 2       ;
+; freqdiv:FGD|Add0~35                           ; 2       ;
+; freqdiv:FGD|Add0~30                           ; 2       ;
+; freqdiv:FGD|Add0~25                           ; 2       ;
+; freqdiv:FGD|Add0~20                           ; 2       ;
+; freqdiv:FGD|Add0~15                           ; 2       ;
+; freqdiv:FGD|Add0~10                           ; 2       ;
+; freqdiv:FGD|Add0~5                            ; 2       ;
+; freqdiv:FGD|Add0~0                            ; 2       ;
+; stepdirdriver:SDRV|OUT[3]                     ; 2       ;
+; stepdirdriver:SDRV|OUT[2]                     ; 2       ;
+; stepdirdriver:SDRV|OUT[1]                     ; 2       ;
+; stepdirdriver:SDRV|OUT[0]                     ; 2       ;
+; MOSI                                          ; 1       ;
+; SCK                                           ; 1       ;
+; SETPOS:STPS|LessThan1~40COUT1_53              ; 1       ;
+; SETPOS:STPS|LessThan1~40COUT0_52              ; 1       ;
+; Humidity:Hum|HYM[0]~0                         ; 1       ;
+; SETPOS:STPS|LessThan1~37COUT1_55              ; 1       ;
+; SETPOS:STPS|LessThan1~37                      ; 1       ;
+; SETPOS:STPS|LessThan0~37COUT1_48              ; 1       ;
+; SETPOS:STPS|LessThan0~37                      ; 1       ;
+; SPI_slave:SPI_MODULE|Equal0~0                 ; 1       ;
+; PWM:p_w_m|LessThan9~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan9~37                        ; 1       ;
+; PWM:p_w_m|LessThan8~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan8~37                        ; 1       ;
+; PWM:p_w_m|LessThan7~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan7~37                        ; 1       ;
+; PWM:p_w_m|LessThan6~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan6~37                        ; 1       ;
+; PWM:p_w_m|LessThan5~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan5~37                        ; 1       ;
+; PWM:p_w_m|LessThan4~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan4~37                        ; 1       ;
+; PWM:p_w_m|LessThan3~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan3~37                        ; 1       ;
+; PWM:p_w_m|LessThan2~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan2~37                        ; 1       ;
+; PWM:p_w_m|LessThan1~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan1~37                        ; 1       ;
+; PWM:p_w_m|LessThan0~37COUT1_48                ; 1       ;
+; PWM:p_w_m|LessThan0~37                        ; 1       ;
+; PWM:p_w_m|cnt[1]~13COUT1_22                   ; 1       ;
+; PWM:p_w_m|cnt[1]~13                           ; 1       ;
+; SETPOS:STPS|LessThan1~32COUT1_57              ; 1       ;
+; SETPOS:STPS|LessThan1~32                      ; 1       ;
+; SETPOS:STPS|LessThan0~32COUT1_50              ; 1       ;
+; SETPOS:STPS|LessThan0~32                      ; 1       ;
+; PWM:p_w_m|LessThan9~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan9~32                        ; 1       ;
+; PWM:p_w_m|LessThan8~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan8~32                        ; 1       ;
+; PWM:p_w_m|LessThan7~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan7~32                        ; 1       ;
+; PWM:p_w_m|LessThan6~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan6~32                        ; 1       ;
+; PWM:p_w_m|LessThan5~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan5~32                        ; 1       ;
+; PWM:p_w_m|LessThan4~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan4~32                        ; 1       ;
+; PWM:p_w_m|LessThan3~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan3~32                        ; 1       ;
+; PWM:p_w_m|LessThan2~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan2~32                        ; 1       ;
+; PWM:p_w_m|LessThan1~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan1~32                        ; 1       ;
+; PWM:p_w_m|LessThan0~32COUT1_50                ; 1       ;
+; PWM:p_w_m|LessThan0~32                        ; 1       ;
+; PWM:p_w_m|cnt[2]~11COUT1_24                   ; 1       ;
+; PWM:p_w_m|cnt[2]~11                           ; 1       ;
+; SETPOS:STPS|LessThan1~27COUT1_59              ; 1       ;
+; SETPOS:STPS|LessThan1~27                      ; 1       ;
+; SETPOS:STPS|LessThan0~27COUT1_52              ; 1       ;
+; SETPOS:STPS|LessThan0~27                      ; 1       ;
+; SPI_slave:SPI_MODULE|HYM_send[1]              ; 1       ;
+; PWM:p_w_m|LessThan9~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan9~27                        ; 1       ;
+; PWM:p_w_m|LessThan8~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan8~27                        ; 1       ;
+; PWM:p_w_m|LessThan7~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan7~27                        ; 1       ;
+; PWM:p_w_m|LessThan6~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan6~27                        ; 1       ;
+; PWM:p_w_m|LessThan5~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan5~27                        ; 1       ;
+; PWM:p_w_m|LessThan4~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan4~27                        ; 1       ;
+; PWM:p_w_m|LessThan3~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan3~27                        ; 1       ;
+; PWM:p_w_m|LessThan2~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan2~27                        ; 1       ;
+; PWM:p_w_m|LessThan1~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan1~27                        ; 1       ;
+; PWM:p_w_m|LessThan0~27COUT1_52                ; 1       ;
+; PWM:p_w_m|LessThan0~27                        ; 1       ;
+; PWM:p_w_m|cnt[3]~9COUT1_26                    ; 1       ;
+; PWM:p_w_m|cnt[3]~9                            ; 1       ;
+; SETPOS:STPS|LessThan0~22COUT1_54              ; 1       ;
+; SETPOS:STPS|LessThan0~22                      ; 1       ;
+; SPI_slave:SPI_MODULE|HYM_send[2]              ; 1       ;
+; Humidity:Hum|always1~8                        ; 1       ;
+; Humidity:Hum|always1~6                        ; 1       ;
+; Humidity:Hum|always1~5                        ; 1       ;
+; Humidity:Hum|always1~4                        ; 1       ;
+; Humidity:Hum|always1~3                        ; 1       ;
+; Humidity:Hum|always1~1                        ; 1       ;
+; Humidity:Hum|Equal6~0                         ; 1       ;
+; Humidity:Hum|id_gorb[3]~9COUT1_22             ; 1       ;
+; Humidity:Hum|id_gorb[3]~9                     ; 1       ;
+; Humidity:Hum|id_gorb[2]~7COUT1_20             ; 1       ;
+; Humidity:Hum|id_gorb[2]~7                     ; 1       ;
+; Humidity:Hum|id_gorb[1]~5COUT1_18             ; 1       ;
+; Humidity:Hum|id_gorb[1]~5                     ; 1       ;
+; Humidity:Hum|id_gorb[4]~1COUT1_24             ; 1       ;
+; Humidity:Hum|id_gorb[4]~1                     ; 1       ;
+; Humidity:Hum|always1~0                        ; 1       ;
+; Humidity:Hum|mstate~17                        ; 1       ;
+; Humidity:Hum|LessThan4~4                      ; 1       ;
+; Humidity:Hum|LessThan4~3                      ; 1       ;
+; Humidity:Hum|LessThan4~2                      ; 1       ;
+; Humidity:Hum|LessThan4~1                      ; 1       ;
+; Humidity:Hum|LessThan4~0                      ; 1       ;
+; Humidity:Hum|mstate~16                        ; 1       ;
+; Humidity:Hum|data_rec[0]                      ; 1       ;
+; PWM:p_w_m|LessThan9~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan9~22                        ; 1       ;
+; PWM:p_w_m|LessThan8~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan8~22                        ; 1       ;
+; PWM:p_w_m|LessThan7~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan7~22                        ; 1       ;
+; PWM:p_w_m|LessThan6~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan6~22                        ; 1       ;
+; PWM:p_w_m|LessThan5~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan5~22                        ; 1       ;
+; PWM:p_w_m|LessThan4~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan4~22                        ; 1       ;
+; PWM:p_w_m|LessThan3~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan3~22                        ; 1       ;
+; PWM:p_w_m|LessThan2~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan2~22                        ; 1       ;
+; PWM:p_w_m|LessThan1~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan1~22                        ; 1       ;
+; PWM:p_w_m|LessThan0~22COUT1_54                ; 1       ;
+; PWM:p_w_m|LessThan0~22                        ; 1       ;
+; SETPOS:STPS|LessThan1~17COUT1_61              ; 1       ;
+; SETPOS:STPS|LessThan1~17                      ; 1       ;
+; SPI_slave:SPI_MODULE|HYM_send[3]              ; 1       ;
+; Humidity:Hum|shet~31                          ; 1       ;
+; Humidity:Hum|Add1~77COUT1_94                  ; 1       ;
+; Humidity:Hum|Add1~77                          ; 1       ;
+; Humidity:Hum|shet~30                          ; 1       ;
+; Humidity:Hum|Add1~72COUT1_98                  ; 1       ;
+; Humidity:Hum|Add1~72                          ; 1       ;
+; Humidity:Hum|shet~29                          ; 1       ;
+; Humidity:Hum|Add1~67COUT1_102                 ; 1       ;
+; Humidity:Hum|Add1~67                          ; 1       ;
+; Humidity:Hum|shet~28                          ; 1       ;
+; Humidity:Hum|Add1~62COUT1_96                  ; 1       ;
+; Humidity:Hum|Add1~62                          ; 1       ;
+; Humidity:Hum|shet~27                          ; 1       ;
+; Humidity:Hum|shet~26                          ; 1       ;
+; Humidity:Hum|shet~25                          ; 1       ;
+; Humidity:Hum|Add1~52COUT1_100                 ; 1       ;
+; Humidity:Hum|Add1~52                          ; 1       ;
+; Humidity:Hum|shet~23                          ; 1       ;
+; Humidity:Hum|Add1~47COUT1_104                 ; 1       ;
+; Humidity:Hum|Add1~47                          ; 1       ;
+; Humidity:Hum|shet~22                          ; 1       ;
+; Humidity:Hum|Add1~42COUT1_116                 ; 1       ;
+; Humidity:Hum|Add1~42                          ; 1       ;
+; Humidity:Hum|shet~21                          ; 1       ;
+; Humidity:Hum|Add1~37COUT1_110                 ; 1       ;
+; Humidity:Hum|Add1~37                          ; 1       ;
+; Humidity:Hum|shet~20                          ; 1       ;
+; Humidity:Hum|shet~19                          ; 1       ;
+; Humidity:Hum|Add1~32COUT1_108                 ; 1       ;
+; Humidity:Hum|Add1~32                          ; 1       ;
+; Humidity:Hum|shet~18                          ; 1       ;
+; Humidity:Hum|shet~17                          ; 1       ;
+; Humidity:Hum|shet~16                          ; 1       ;
+; Humidity:Hum|shet~15                          ; 1       ;
+; Humidity:Hum|shet~14                          ; 1       ;
+; Humidity:Hum|Add1~12COUT1_114                 ; 1       ;
+; Humidity:Hum|Add1~12                          ; 1       ;
+; Humidity:Hum|shet~13                          ; 1       ;
+; Humidity:Hum|Add1~7COUT1_106                  ; 1       ;
+; Humidity:Hum|Add1~7                           ; 1       ;
+; Humidity:Hum|shet~12                          ; 1       ;
+; Humidity:Hum|shet~11                          ; 1       ;
+; Humidity:Hum|Add1~2COUT1_112                  ; 1       ;
+; Humidity:Hum|Add1~2                           ; 1       ;
+; Humidity:Hum|shet~10                          ; 1       ;
+; Humidity:Hum|protocol[0]                      ; 1       ;
+; PWM:p_w_m|cnt[5]~5COUT1_28                    ; 1       ;
+; PWM:p_w_m|cnt[5]~5                            ; 1       ;
+; SETPOS:STPS|LessThan1~12COUT1_63              ; 1       ;
+; SETPOS:STPS|LessThan1~12                      ; 1       ;
+; SPI_slave:SPI_MODULE|MOSIr[0]                 ; 1       ;
+; SPI_slave:SPI_MODULE|SSELr[0]                 ; 1       ;
+; SETPOS:STPS|LessThan0~12COUT1_56              ; 1       ;
+; SETPOS:STPS|LessThan0~12                      ; 1       ;
+; SPI_slave:SPI_MODULE|HYM_send[4]              ; 1       ;
+; five_sec:F_S|Add0~112COUT1_166                ; 1       ;
+; five_sec:F_S|Add0~112                         ; 1       ;
+; five_sec:F_S|Add0~110                         ; 1       ;
+; five_sec:F_S|Add0~107COUT1_160                ; 1       ;
+; five_sec:F_S|Add0~107                         ; 1       ;
+; five_sec:F_S|Add0~105                         ; 1       ;
+; five_sec:F_S|Add0~100                         ; 1       ;
+; five_sec:F_S|Add0~97COUT1_164                 ; 1       ;
+; five_sec:F_S|Add0~97                          ; 1       ;
+; five_sec:F_S|Add0~95                          ; 1       ;
+; five_sec:F_S|Add0~92COUT1_154                 ; 1       ;
+; five_sec:F_S|Add0~92                          ; 1       ;
+; five_sec:F_S|Add0~90                          ; 1       ;
+; five_sec:F_S|Add0~85                          ; 1       ;
+; five_sec:F_S|Add0~82COUT1_156                 ; 1       ;
+; five_sec:F_S|Add0~82                          ; 1       ;
+; five_sec:F_S|Add0~80                          ; 1       ;
+; five_sec:F_S|Add0~77COUT1_150                 ; 1       ;
+; five_sec:F_S|Add0~77                          ; 1       ;
+; five_sec:F_S|Add0~75                          ; 1       ;
+; five_sec:F_S|Add0~72COUT1_144                 ; 1       ;
+; five_sec:F_S|Add0~72                          ; 1       ;
+; five_sec:F_S|Add0~70                          ; 1       ;
+; five_sec:F_S|Add0~65                          ; 1       ;
+; five_sec:F_S|Add0~62COUT1_142                 ; 1       ;
+; five_sec:F_S|Add0~62                          ; 1       ;
+; five_sec:F_S|Add0~60                          ; 1       ;
+; five_sec:F_S|Add0~57COUT1_148                 ; 1       ;
+; five_sec:F_S|Add0~57                          ; 1       ;
+; five_sec:F_S|Add0~55                          ; 1       ;
+; five_sec:F_S|Add0~52COUT1_158                 ; 1       ;
+; five_sec:F_S|Add0~52                          ; 1       ;
+; five_sec:F_S|Add0~50                          ; 1       ;
+; five_sec:F_S|Add0~45                          ; 1       ;
+; five_sec:F_S|Add0~42COUT1_162                 ; 1       ;
+; five_sec:F_S|Add0~42                          ; 1       ;
+; five_sec:F_S|Add0~40                          ; 1       ;
+; five_sec:F_S|Add0~35                          ; 1       ;
+; five_sec:F_S|Add0~32COUT1_152                 ; 1       ;
+; five_sec:F_S|Add0~32                          ; 1       ;
+; five_sec:F_S|Add0~30                          ; 1       ;
+; five_sec:F_S|Add0~25                          ; 1       ;
+; five_sec:F_S|Add0~22COUT1_134                 ; 1       ;
+; five_sec:F_S|Add0~22                          ; 1       ;
+; five_sec:F_S|Add0~20                          ; 1       ;
+; five_sec:F_S|Add0~17COUT1_136                 ; 1       ;
+; five_sec:F_S|Add0~17                          ; 1       ;
+; five_sec:F_S|Add0~15                          ; 1       ;
+; five_sec:F_S|Add0~12COUT1_138                 ; 1       ;
+; five_sec:F_S|Add0~12                          ; 1       ;
+; five_sec:F_S|Add0~10                          ; 1       ;
+; five_sec:F_S|Add0~7COUT1_140                  ; 1       ;
+; five_sec:F_S|Add0~7                           ; 1       ;
+; five_sec:F_S|Add0~5                           ; 1       ;
+; five_sec:F_S|Add0~2COUT1_146                  ; 1       ;
+; five_sec:F_S|Add0~2                           ; 1       ;
+; five_sec:F_S|Add0~0                           ; 1       ;
+; Humidity:Hum|Equal3~6                         ; 1       ;
+; Humidity:Hum|Equal3~4                         ; 1       ;
+; Humidity:Hum|Equal3~3                         ; 1       ;
+; Humidity:Hum|Equal3~2                         ; 1       ;
+; PWM:p_w_m|LessThan9~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan9~12                        ; 1       ;
+; PWM:p_w_m|LessThan8~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan8~12                        ; 1       ;
+; PWM:p_w_m|LessThan7~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan7~12                        ; 1       ;
+; PWM:p_w_m|LessThan6~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan6~12                        ; 1       ;
+; PWM:p_w_m|LessThan5~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan5~12                        ; 1       ;
+; PWM:p_w_m|LessThan4~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan4~12                        ; 1       ;
+; PWM:p_w_m|LessThan3~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan3~12                        ; 1       ;
+; PWM:p_w_m|LessThan2~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan2~12                        ; 1       ;
+; PWM:p_w_m|LessThan1~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan1~12                        ; 1       ;
+; PWM:p_w_m|LessThan0~12COUT1_56                ; 1       ;
+; PWM:p_w_m|LessThan0~12                        ; 1       ;
+; PWM:p_w_m|cnt[6]~3COUT1_30                    ; 1       ;
+; PWM:p_w_m|cnt[6]~3                            ; 1       ;
+; SETPOS:STPS|LessThan1~7COUT1_65               ; 1       ;
+; SETPOS:STPS|LessThan1~7                       ; 1       ;
+; SPI_slave:SPI_MODULE|MOSIr[1]                 ; 1       ;
+; SETPOS:STPS|LessThan0~7COUT1_58               ; 1       ;
+; SETPOS:STPS|LessThan0~7                       ; 1       ;
+; SETPOS:STPS|DIR~0                             ; 1       ;
+; SPI_slave:SPI_MODULE|SCKr[0]                  ; 1       ;
+; SPI_slave:SPI_MODULE|HYM_send[5]              ; 1       ;
+; freqdiv:FGD|i[31]                             ; 1       ;
+; freqdiv:FGD|i[30]                             ; 1       ;
+; freqdiv:FGD|i[29]                             ; 1       ;
+; freqdiv:FGD|i[28]                             ; 1       ;
+; freqdiv:FGD|i[27]                             ; 1       ;
+; freqdiv:FGD|i[26]                             ; 1       ;
+; freqdiv:FGD|i[25]                             ; 1       ;
+; freqdiv:FGD|i[24]                             ; 1       ;
+; freqdiv:FGD|i[23]                             ; 1       ;
+; freqdiv:FGD|i[22]                             ; 1       ;
+; freqdiv:FGD|i[21]                             ; 1       ;
+; freqdiv:FGD|i[20]                             ; 1       ;
+; freqdiv:FGD|i[19]                             ; 1       ;
+; freqdiv:FGD|i[18]                             ; 1       ;
+; freqdiv:FGD|i[17]                             ; 1       ;
+; freqdiv:FGD|i[16]                             ; 1       ;
+; freqdiv:FGD|i[13]                             ; 1       ;
+; freqdiv:FGD|i[12]                             ; 1       ;
+; freqdiv:FGD|i[15]                             ; 1       ;
+; freqdiv:FGD|i[14]                             ; 1       ;
+; freqdiv:FGD|i[11]                             ; 1       ;
+; freqdiv:FGD|i[10]                             ; 1       ;
+; freqdiv:FGD|i[9]                              ; 1       ;
+; freqdiv:FGD|i[8]                              ; 1       ;
+; freqdiv:FGD|i[7]                              ; 1       ;
+; freqdiv:FGD|i[5]                              ; 1       ;
+; freqdiv:FGD|i[6]                              ; 1       ;
+; freqdiv:FGD|i[4]                              ; 1       ;
+; freqdiv:FGD|i[3]                              ; 1       ;
+; freqdiv:FGD|i[2]                              ; 1       ;
+; freqdiv:FGD|i[1]                              ; 1       ;
+; five_sec:F_S|Equal1~3                         ; 1       ;
+; five_sec:F_S|Equal1~2                         ; 1       ;
+; five_sec:F_S|Equal1~1                         ; 1       ;
+; five_sec:F_S|Equal1~0                         ; 1       ;
+; five_sec:F_S|Equal0~6                         ; 1       ;
+; five_sec:F_S|Equal0~5                         ; 1       ;
+; five_sec:F_S|Equal0~4                         ; 1       ;
+; five_sec:F_S|five_sec[16]                     ; 1       ;
+; five_sec:F_S|five_sec[20]                     ; 1       ;
+; five_sec:F_S|Equal0~2                         ; 1       ;
+; five_sec:F_S|five_sec[1]                      ; 1       ;
+; five_sec:F_S|Equal0~1                         ; 1       ;
+; five_sec:F_S|five_sec[4]                      ; 1       ;
+; five_sec:F_S|Equal0~0                         ; 1       ;
+; PWM:p_w_m|LessThan9~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan9~7                         ; 1       ;
+; SPI_slave:SPI_MODULE|byte_data_received[87]   ; 1       ;
+; PWM:p_w_m|LessThan8~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan8~7                         ; 1       ;
+; PWM:p_w_m|LessThan7~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan7~7                         ; 1       ;
+; PWM:p_w_m|LessThan6~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan6~7                         ; 1       ;
+; PWM:p_w_m|LessThan5~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan5~7                         ; 1       ;
+; PWM:p_w_m|LessThan4~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan4~7                         ; 1       ;
+; PWM:p_w_m|LessThan3~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan3~7                         ; 1       ;
+; PWM:p_w_m|LessThan2~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan2~7                         ; 1       ;
+; PWM:p_w_m|LessThan1~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan1~7                         ; 1       ;
+; PWM:p_w_m|LessThan0~7COUT1_58                 ; 1       ;
+; PWM:p_w_m|LessThan0~7                         ; 1       ;
+; SETPOS:STPS|M_EN~0                            ; 1       ;
+; SETPOS:STPS|Equal0~5                          ; 1       ;
+; SETPOS:STPS|Equal0~4                          ; 1       ;
+; SETPOS:STPS|angle_current[7]~21COUT1_45       ; 1       ;
+; SETPOS:STPS|angle_current[7]~21               ; 1       ;
+; SETPOS:STPS|angle_current[8]~19COUT1_47       ; 1       ;
+; SETPOS:STPS|angle_current[8]~19               ; 1       ;
+; SETPOS:STPS|angle_current[2]~17COUT1_37       ; 1       ;
+; SETPOS:STPS|angle_current[2]~17               ; 1       ;
+; SETPOS:STPS|angle_current[1]~15COUT1_35       ; 1       ;
+; SETPOS:STPS|angle_current[1]~15               ; 1       ;
+; SETPOS:STPS|angle_current[0]~13COUT1_33       ; 1       ;
+; SETPOS:STPS|angle_current[0]~13               ; 1       ;
+; SETPOS:STPS|Equal0~2                          ; 1       ;
+; SETPOS:STPS|angle_current[5]~11COUT1_41       ; 1       ;
+; SETPOS:STPS|angle_current[5]~11               ; 1       ;
+; SETPOS:STPS|angle_current[6]~9COUT1_43        ; 1       ;
+; SETPOS:STPS|angle_current[6]~9                ; 1       ;
+; SETPOS:STPS|Equal0~1                          ; 1       ;
+; SETPOS:STPS|angle_current[3]~7COUT1_39        ; 1       ;
+; SETPOS:STPS|angle_current[3]~7                ; 1       ;
+; SETPOS:STPS|Equal0~0                          ; 1       ;
+; SETPOS:STPS|angle_current[9]~3                ; 1       ;
+; stepdirdriver:SDRV|state~0                    ; 1       ;
+; stepdirdriver:SDRV|state[3]                   ; 1       ;
+; SPI_slave:SPI_MODULE|HYM_send[6]              ; 1       ;
+; freqdiv:FGD|Equal0~8                          ; 1       ;
+; freqdiv:FGD|Add0~152                          ; 1       ;
+; freqdiv:FGD|Add0~147COUT1_232                 ; 1       ;
+; freqdiv:FGD|Add0~147                          ; 1       ;
+; freqdiv:FGD|Add0~142COUT1_230                 ; 1       ;
+; freqdiv:FGD|Add0~142                          ; 1       ;
+; freqdiv:FGD|Equal0~7                          ; 1       ;
+; freqdiv:FGD|Add0~137COUT1_228                 ; 1       ;
+; freqdiv:FGD|Add0~137                          ; 1       ;
+; freqdiv:FGD|Add0~132COUT1_226                 ; 1       ;
+; freqdiv:FGD|Add0~132                          ; 1       ;
+; freqdiv:FGD|Add0~122COUT1_224                 ; 1       ;
+; freqdiv:FGD|Add0~122                          ; 1       ;
+; freqdiv:FGD|Equal0~6                          ; 1       ;
+; freqdiv:FGD|Add0~117COUT1_222                 ; 1       ;
+; freqdiv:FGD|Add0~117                          ; 1       ;
+; freqdiv:FGD|Add0~112COUT1_220                 ; 1       ;
+; freqdiv:FGD|Add0~112                          ; 1       ;
+; freqdiv:FGD|Add0~107COUT1_218                 ; 1       ;
+; freqdiv:FGD|Add0~107                          ; 1       ;
+; freqdiv:FGD|Equal0~5                          ; 1       ;
+; freqdiv:FGD|Add0~97COUT1_216                  ; 1       ;
+; freqdiv:FGD|Add0~97                           ; 1       ;
+; freqdiv:FGD|Add0~92COUT1_214                  ; 1       ;
+; freqdiv:FGD|Add0~92                           ; 1       ;
+; freqdiv:FGD|Add0~87COUT1_212                  ; 1       ;
+; freqdiv:FGD|Add0~87                           ; 1       ;
+; freqdiv:FGD|Add0~82COUT1_210                  ; 1       ;
+; freqdiv:FGD|Add0~82                           ; 1       ;
+; freqdiv:FGD|Equal0~3                          ; 1       ;
+; freqdiv:FGD|Add0~77COUT1_206                  ; 1       ;
+; freqdiv:FGD|Add0~77                           ; 1       ;
+; freqdiv:FGD|Add0~72COUT1_204                  ; 1       ;
+; freqdiv:FGD|Add0~72                           ; 1       ;
+; freqdiv:FGD|Add0~62COUT1_208                  ; 1       ;
+; freqdiv:FGD|Add0~62                           ; 1       ;
+; freqdiv:FGD|Equal0~2                          ; 1       ;
+; freqdiv:FGD|Add0~57COUT1_202                  ; 1       ;
+; freqdiv:FGD|Add0~57                           ; 1       ;
+; freqdiv:FGD|Add0~47COUT1_200                  ; 1       ;
+; freqdiv:FGD|Add0~47                           ; 1       ;
+; freqdiv:FGD|Add0~42COUT1_198                  ; 1       ;
+; freqdiv:FGD|Add0~42                           ; 1       ;
+; freqdiv:FGD|Equal0~1                          ; 1       ;
+; freqdiv:FGD|Add0~37COUT1_196                  ; 1       ;
+; freqdiv:FGD|Add0~37                           ; 1       ;
+; freqdiv:FGD|Add0~27COUT1_194                  ; 1       ;
+; freqdiv:FGD|Add0~27                           ; 1       ;
+; freqdiv:FGD|Add0~22COUT1_192                  ; 1       ;
+; freqdiv:FGD|Add0~22                           ; 1       ;
+; freqdiv:FGD|Equal0~0                          ; 1       ;
+; freqdiv:FGD|Add0~17COUT1_190                  ; 1       ;
+; freqdiv:FGD|Add0~17                           ; 1       ;
+; freqdiv:FGD|Add0~12COUT1_188                  ; 1       ;
+; freqdiv:FGD|Add0~12                           ; 1       ;
+; freqdiv:FGD|Add0~7COUT1_186                   ; 1       ;
+; freqdiv:FGD|Add0~7                            ; 1       ;
+; PWM:p_w_m|LessThan9~0                         ; 1       ;
+; PWM:p_w_m|LessThan8~0                         ; 1       ;
+; PWM:p_w_m|LessThan7~0                         ; 1       ;
+; PWM:p_w_m|LessThan6~0                         ; 1       ;
+; PWM:p_w_m|LessThan5~0                         ; 1       ;
+; PWM:p_w_m|LessThan4~0                         ; 1       ;
+; PWM:p_w_m|LessThan3~0                         ; 1       ;
+; PWM:p_w_m|LessThan2~0                         ; 1       ;
+; PWM:p_w_m|LessThan1~0                         ; 1       ;
+; PWM:p_w_m|LessThan0~0                         ; 1       ;
+; Energy_saver:E_s|OUT_final[3]~3               ; 1       ;
+; Energy_saver:E_s|OUT_final[2]~2               ; 1       ;
+; Energy_saver:E_s|OUT_final[1]~1               ; 1       ;
+; Energy_saver:E_s|OUT_final[0]~0               ; 1       ;
+; SPI_slave:SPI_MODULE|HYM_send[7]              ; 1       ;
++-----------------------------------------------+---------+
+
+
++---------------------------------------------------+
+; Interconnect Usage Summary                        ;
++----------------------------+----------------------+
+; Interconnect Resource Type ; Usage                ;
++----------------------------+----------------------+
+; C4s                        ; 274 / 1,624 ( 17 % ) ;
+; Direct links               ; 88 / 1,930 ( 5 % )   ;
+; Global clocks              ; 4 / 4 ( 100 % )      ;
+; LAB clocks                 ; 21 / 56 ( 38 % )     ;
+; LUT chains                 ; 20 / 513 ( 4 % )     ;
+; Local interconnects        ; 627 / 1,930 ( 32 % ) ;
+; R4s                        ; 471 / 1,472 ( 32 % ) ;
++----------------------------+----------------------+
+
+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 8.80) ; Number of LABs  (Total = 56) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 2                            ;
+; 2                                          ; 2                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 1                            ;
+; 5                                          ; 2                            ;
+; 6                                          ; 0                            ;
+; 7                                          ; 1                            ;
+; 8                                          ; 2                            ;
+; 9                                          ; 10                           ;
+; 10                                         ; 36                           ;
++--------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 1.52) ; Number of LABs  (Total = 56) ;
++------------------------------------+------------------------------+
+; 1 Clock                            ; 50                           ;
+; 1 Clock enable                     ; 23                           ;
+; 1 Sync. clear                      ; 4                            ;
+; 1 Sync. load                       ; 7                            ;
+; 2 Clocks                           ; 1                            ;
++------------------------------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 7.66) ; Number of LABs  (Total = 56) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 2                            ;
+; 3                                           ; 11                           ;
+; 4                                           ; 2                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 9                            ;
+; 10                                          ; 17                           ;
+; 11                                          ; 4                            ;
+; 12                                          ; 4                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 1                            ;
++---------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 5.59) ; Number of LABs  (Total = 56) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 4                            ;
+; 2                                               ; 12                           ;
+; 3                                               ; 5                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 4                            ;
+; 6                                               ; 6                            ;
+; 7                                               ; 3                            ;
+; 8                                               ; 3                            ;
+; 9                                               ; 7                            ;
+; 10                                              ; 6                            ;
+; 11                                              ; 2                            ;
+; 12                                              ; 1                            ;
++-------------------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 10.43) ; Number of LABs  (Total = 56) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 3                            ;
+; 3                                            ; 5                            ;
+; 4                                            ; 5                            ;
+; 5                                            ; 4                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 4                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 5                            ;
+; 12                                           ; 3                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 12                           ;
+; 17                                           ; 0                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 2                            ;
++----------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------+
+; Fitter Device Options                                              ;
++----------------------------------------------+---------------------+
+; Option                                       ; Setting             ;
++----------------------------------------------+---------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                 ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                 ;
+; Enable device-wide output enable (DEV_OE)    ; Off                 ;
+; Enable INIT_DONE output                      ; Off                 ;
+; Configuration scheme                         ; Passive Serial      ;
+; Reserve all unused pins                      ; As input tri-stated ;
+; Base pin-out file on sameframe device        ; Off                 ;
++----------------------------------------------+---------------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Fitter
+    Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Sep 10 20:18:02 2014
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off First_project -c First_project
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (119006): Selected device EPM570T100C5 for design "First_project"
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info (176445): Device EPM240T100C5 is compatible
+    Info (176445): Device EPM240T100I5 is compatible
+    Info (176445): Device EPM240T100A5 is compatible
+    Info (176445): Device EPM570T100I5 is compatible
+    Info (176445): Device EPM570T100A5 is compatible
+Critical Warning (169085): No exact pin location assignment(s) for 5 pins of 28 total pins
+    Info (169086): Pin OUT[0] not assigned to an exact location on the device
+    Info (169086): Pin OUT[1] not assigned to an exact location on the device
+    Info (169086): Pin OUT[2] not assigned to an exact location on the device
+    Info (169086): Pin OUT[3] not assigned to an exact location on the device
+    Info (169086): Pin clk50M not assigned to an exact location on the device
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'First_project.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info (332127): Assuming a default timing requirement
+Info (332111): Found 4 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):    1.000       clk50M
+    Info (332111):    1.000 freqdiv:FGD|clk1hz
+    Info (332111):    1.000 freqdiv:FGD|clk1M
+    Info (332111):    1.000 freqdiv:FGD|clk25M
+Info (186079): Completed User Assigned Global Signals Promotion Operation
+Info (186215): Automatically promoted signal "clk50M" to use Global clock in PIN 12
+Info (186216): Automatically promoted some destinations of signal "freqdiv:FGD|clk1M" to use Global clock
+    Info (186217): Destination "freqdiv:FGD|clk1M" may be non-global or may not use global clock
+Info (186216): Automatically promoted some destinations of signal "freqdiv:FGD|clk1hz" to use Global clock
+    Info (186217): Destination "led1" may be non-global or may not use global clock
+    Info (186217): Destination "freqdiv:FGD|clk1hz" may be non-global or may not use global clock
+    Info (186217): Destination "RELAY:RL|Q" may be non-global or may not use global clock
+Info (186216): Automatically promoted some destinations of signal "freqdiv:FGD|clk25M" to use Global clock
+    Info (186217): Destination "freqdiv:FGD|clk25M" may be non-global or may not use global clock
+Info (186079): Completed Auto Global Promotion Operation
+Info (176234): Starting register packing
+Info (186391): Fitter is using Normal packing mode for logic elements with Auto setting for Auto Packed Registers logic option
+Info (186468): Started processing fast register assignments
+Info (186469): Finished processing fast register assignments
+Info (176235): Finished register packing
+Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info (176211): Number of I/O pins in group: 4 (unused VREF, 3.3V VCCIO, 0 input, 4 output, 0 bidirectional)
+        Info (176212): I/O standards used: 3.3-V LVTTL.
+Info (176215): I/O bank details before I/O pin placement
+    Info (176214): Statistics of I/O banks
+        Info (176213): I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 22 total pin(s) used --  14 pins available
+        Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 2 total pin(s) used --  38 pins available
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (170189): Fitter placement preparation operations beginning
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 24% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 24% of the available device resources in the region that extends from location X0_Y0 to location X13_Y8
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info (170201): Optimizations that may affect the design's routability were skipped
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (144001): Generated suppressed messages file C:/CPLD project/CPLD project/First_project.fit.smsg
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 362 megabytes
+    Info: Processing ended: Wed Sep 10 20:18:05 2014
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++----------------------------+
+; Fitter Suppressed Messages ;
++----------------------------+
+The suppressed messages can be found in C:/CPLD project/CPLD project/First_project.fit.smsg.
+
+
