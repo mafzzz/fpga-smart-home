@@ -73,7 +73,7 @@ RESERVED_INPUT               : 8         :        :                   :         
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
-clk50M                       : 12        : input  : 3.3-V LVTTL       :         : 1         : N              
+clk50M                       : 12        : input  : 3.3-V LVTTL       :         : 1         : Y              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
 RESERVED_INPUT               : 14        :        :                   :         : 1         :                
 OUT_final[0]                 : 15        : output : 3.3-V LVTTL       :         : 1         : Y              
@@ -89,7 +89,7 @@ TCK                          : 24        : input  :                   :         
 TDO                          : 25        : output :                   :         : 1         :                
 PWM_out7                     : 26        : output : 3.3-V LVTTL       :         : 1         : Y              
 RESERVED_INPUT               : 27        :        :                   :         : 1         :                
-Data_H                       : 28        : output : 3.3-V LVTTL       :         : 1         : Y              
+Data_H                       : 28        : bidir  : 3.3-V LVCMOS      :         : 1         : Y              
 RESERVED_INPUT               : 29        :        :                   :         : 1         :                
 PWM_out8                     : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
@@ -105,7 +105,7 @@ PWM_out6                     : 40        : output : 3.3-V LVTTL       :         
 RESERVED_INPUT               : 41        :        :                   :         : 1         :                
 RESERVED_INPUT               : 42        :        :                   :         : 1         :                
 RESERVED_INPUT               : 43        :        :                   :         : 1         :                
-OUT[3]                       : 44        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 44        :        :                   :         : 1         :                
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
 SSEL                         : 47        : input  : 3.3-V LVTTL       :         : 1         : Y              
@@ -117,7 +117,7 @@ RESERVED_INPUT               : 52        :        :                   :         
 RESERVED_INPUT               : 53        :        :                   :         : 2         :                
 flag_five_sec                : 54        : output : 3.3-V LVTTL       :         : 2         : Y              
 PWM_out_vent                 : 55        : output : 3.3-V LVTTL       :         : 2         : Y              
-RESERVED_INPUT               : 56        :        :                   :         : 2         :                
+Data_H_test                  : 56        : output : 3.3-V LVTTL       :         : 2         : Y              
 RESERVED_INPUT               : 57        :        :                   :         : 2         :                
 RESERVED_INPUT               : 58        :        :                   :         : 2         :                
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
@@ -128,7 +128,7 @@ VCCINT                       : 63        : power  :                   : 2.5V/3.3
 RESERVED_INPUT               : 64        :        :                   :         : 2         :                
 GNDINT                       : 65        : gnd    :                   :         :           :                
 RESERVED_INPUT               : 66        :        :                   :         : 2         :                
-OUT[2]                       : 67        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 67        :        :                   :         : 2         :                
 RESERVED_INPUT               : 68        :        :                   :         : 2         :                
 RESERVED_INPUT               : 69        :        :                   :         : 2         :                
 RESERVED_INPUT               : 70        :        :                   :         : 2         :                
@@ -139,12 +139,12 @@ RESERVED_INPUT               : 74        :        :                   :         
 RESERVED_INPUT               : 75        :        :                   :         : 2         :                
 RESERVED_INPUT               : 76        :        :                   :         : 2         :                
 RESERVED_INPUT               : 77        :        :                   :         : 2         :                
-OUT[0]                       : 78        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 78        :        :                   :         : 2         :                
 GNDIO                        : 79        : gnd    :                   :         :           :                
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
 RESERVED_INPUT               : 81        :        :                   :         : 2         :                
 RESERVED_INPUT               : 82        :        :                   :         : 2         :                
-OUT[1]                       : 83        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 83        :        :                   :         : 2         :                
 RESERVED_INPUT               : 84        :        :                   :         : 2         :                
 RESERVED_INPUT               : 85        :        :                   :         : 2         :                
 RESERVED_INPUT               : 86        :        :                   :         : 2         :                
