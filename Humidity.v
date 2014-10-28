@@ -11,19 +11,18 @@ reg[5:0] id_gorb; //номер принятого горба
 reg [39:0]HYM; // регистр для хранения данных от датчика
 output reg [39:0]HYM2; //регистр передачи значения датчика наружу блока оконечный
 reg [2:0] mstate; // стейт 0-ждем фронт 5 сек, стейт 1 - отправляем приветствие, стейт 2 - читаем ответ
+reg Data_H_write;
 
-
-initial
-begin
-shet=0; //счетчик метроном приветствия
-Data_H_REG<=1'b0;
-mstate=0;
-protocol=3'b000;
-data_rec=3'b000;
-//HYM2=8'b11001101;
+initial begin
+	shet=0; //счетчик метроном приветствия
+	Data_H_REG<=1'b0;
+	mstate=0;
+	protocol=3'b000;
+	data_rec=3'b000;
+	Data_H_write=0;
 end
 
-assign Data_H=Data_H_REG;
+assign Data_H = (Data_H_write==1) ? Data_H_REG : 1'bz;
 
 always @(posedge clk1M) protocol <= {protocol[1:0], flag_five_sec};
 wire FFS_risingedge = (protocol[2:1]==2'b01);  // now we can detect flag_five_sec rising edges
@@ -31,12 +30,12 @@ wire FSDR_risingedge=(data_rec[2:1]==2'b01); // детектируем подъ�
 wire FSDR_fallingedge=(data_rec[2:1]==2'b10); // детектируем спад на шине данных
 
 always @(posedge clk1M) begin
-if(FFS_risingedge)
-begin
-mstate=1;
-Data_H_REG<=1'b0;
-shet=0;
-end
+	if(FFS_risingedge)begin
+	   Data_H_write=1;
+		mstate=1;
+		Data_H_REG<=1'b0;
+		shet=0;
+	end
 
 if (mstate==1) // приветствие от плис к датчику
 begin
@@ -52,7 +51,7 @@ begin
 		   end else	if (shet==18041)
 				begin
 				shet<=shet+1'b1;
-				Data_H_REG<=1'bz; // переводим шину на вход
+			   Data_H_write=0; // переводим шину на вход
 				mstate<=2;
 				shet<=0;
 				end else 
