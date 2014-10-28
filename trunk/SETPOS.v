@@ -1,14 +1,13 @@
-module  SETPOS (input WR,input key0,input clk1hz,output reg M_EN,output reg DIR,input [15:0] byte_data_received);
+module  SETPOS (input key0,input clk1hz,output reg M_EN,output reg DIR,input [15:0] byte_data_received);
 
 reg dev_state; // 0- это init 1- это работа по установке угла
 reg [10:0] angle_target; //целевой
 reg [10:0] angle_current; //текущий
-initial
-begin
-dev_state=1'b0;
-angle_current=0;
-angle_target=0;
 
+initial begin
+	dev_state=1'b0;
+	angle_current=0;
+	angle_target=0;
 end
 
 
