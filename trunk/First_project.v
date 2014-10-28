@@ -24,7 +24,7 @@ module First_project(input wire key0,
 			            //input wire angle_target,
 							//input wire dev_state,
 			            //output wire clk1M_out,
-							output wire Data_H,
+							inout wire Data_H,
 							output wire flag_five_sec
 							//output wire MISO1
 							     );
