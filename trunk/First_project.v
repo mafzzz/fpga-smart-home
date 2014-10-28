@@ -22,17 +22,20 @@ module First_project(input wire key0,
 							output wire PWM_out9, //добавляем восьмой канал
 							output wire PWM_out_vent, //добавляем десятый канал вентиляции вытяжки
 			            //input wire angle_target,
-							//input wire WR,
+							input wire WR,
 							//input wire dev_state,
 			            //output wire clk1M_out,
 							output wire Data_H,
 							output wire flag_five_sec
 							//output wire MISO1
 							     );
-	  tri [87:0]byte_data_received;
-	  //tri [39:0]HYM;
-	  SPI_slave SPI_MODULE(clk50M, SCK, MOSI, MISO, SSEL, LED,byte_data_received,HYM2);
-	  freqdiv       FGD(clk50M,clk1hz,clk25M,clk1M); // важна последовательность объявления экземпляров?
+	  wire [39:0]HYM2;
+	  wire LED;
+	  wire [87:0]byte_data_received;
+	  SPI_slave SPI_MODULE(clk50M, SCK, MOSI, MISO, SSEL, LED, byte_data_received,HYM2);
+	  wire clk1hz,clk25M,clk1M;
+	  frqdiv       FGD(clk50M,clk1hz,clk25M,clk1M); // важна последовательность объявления экземпляров?
+	  wire M_EN,DIR, STEP;
 	  SETPOS        STPS(WR,key0,clk1hz,M_EN,DIR,byte_data_received);
 	  RELAY         RL(clk1hz,M_EN,STEP);
 	  stepdirdriver SDRV(STEP, DIR, OUT);

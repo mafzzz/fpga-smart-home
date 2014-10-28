@@ -15,7 +15,7 @@ end
 // Для примера, полностью открыта - это примерно 2100, 2200
 always  @(posedge clk1hz)
 begin
-angle_target=(byte_data_received [7:0])*8;
+angle_target=(byte_data_received [7:0]) << 3;
    if (dev_state == 1'b0)
    begin
        if (key0==0)
