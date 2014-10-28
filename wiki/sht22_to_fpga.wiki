@@ -1,3 +1,5 @@
 #summary DHT-22 sheme
 
 = Схема подключения DHT-22 к ПЛИС=
+
+<img src="http://ebay.arduinodiy.co.uk/ebayimages/ebaycontent/dht22circuit.jpg">
