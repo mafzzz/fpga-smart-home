@@ -8,7 +8,7 @@ module First_project(input wire key0,
 			            input wire MOSI,
 			            output wire MISO,
 			            input wire SSEL,
-                     output wire [3:0]OUT,
+                     //output wire [3:0]OUT,
 							output wire [3:0]OUT_final,
 							//output wire [47:0]byte_data_received, 
 							output wire PWM_out,
@@ -38,8 +38,9 @@ module First_project(input wire key0,
 	  wire M_EN,DIR, STEP;
 	  SETPOS        STPS(WR,key0,clk1hz,M_EN,DIR,byte_data_received);
 	  RELAY         RL(clk1hz,M_EN,STEP);
-	  stepdirdriver SDRV(STEP, DIR, OUT);
-	  Energy_saver  E_s(clk1hz,M_EN,OUT,OUT_final); 
+	  wire [3:0] STEP_OUT;
+	  stepdirdriver SDRV(STEP, DIR, STEP_OUT);
+	  Energy_saver  E_s(clk1hz,M_EN,STEP_OUT,OUT_final); 
 	  PWM           p_w_m(clk25M,byte_data_received,PWM_out,PWM_out2,PWM_out3,PWM_out4,PWM_out5,PWM_out6,PWM_out7,PWM_out8,PWM_out9,PWM_out_vent); 
 	  Humidity      Hum(clk1M,Data_H,flag_five_sec,HYM2);
 	  five_sec      F_S(clk1M,flag_five_sec);
