@@ -31,21 +31,23 @@ reg [3:0] bit_cntr=7;
 reg byte_received;  // high when a byte has been received
 reg [7:0] cnt;
 reg [39:0] HYM_send; // регистр куда помещаем инфу влажности с вектора входа, его и будем смещать при передаче.
-reg [39:0] HYM_send_test;
-initial HYM_send_test=39'b010101010101010101010101010101010101010;
+//reg [39:0] HYM_send_test;
+//initial HYM_send_test=39'b010101010101010101010101010101010101010;
 
 always @(posedge clk)
 begin
   if(~SSEL_active)
   begin
   bitcnt<=7'b0000000;
-  
+  HYM_send<=HYM2; // помещаем данные из вектора входа в регистр если передача по спи не активна.
+  //HYM_send_test<=39'b010101010101010101010101010101010101010;
    end else if(SCK_risingedge)
 				begin
 				bitcnt<=bitcnt+7'b0000001;
 				// implement a shift-left register (since we receive the data MSB first)
 				byte_data_received <= {byte_data_received[86:0], MOSI_data}; 
-				HYM_send_test<=HYM_send_test<<1;
+				//HYM_send_test<=HYM_send_test<<1;
+				HYM_send<=HYM_send<<1;
 				end 
 end
 
@@ -58,6 +60,6 @@ end
 end 
 */
 
-assign MISO=HYM_send_test[39];
+assign MISO=HYM_send[39];
 
 endmodule
