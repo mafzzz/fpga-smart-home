@@ -1,4 +1,4 @@
-module Humidity (clk1M,Data_H,flag_five_sec,HYM2);
+module Humidity (clk1M,Data_H,flag_five_sec,HYM2, Data_H_test);
 input clk1M;
 inout wire Data_H; // линия данных датчика влажности
 reg Data_H_REG;
@@ -12,6 +12,7 @@ reg [39:0]HYM; // регистр для хранения данных от да�
 output reg [39:0]HYM2; //регистр передачи значения датчика наружу блока оконечный
 reg [2:0] mstate; // стейт 0-ждем фронт 5 сек, стейт 1 - отправляем приветствие, стейт 2 - читаем ответ
 reg Data_H_write;
+output reg Data_H_test;
 
 initial begin
 	shet=0; //счетчик метроном приветствия
@@ -20,6 +21,7 @@ initial begin
 	protocol=3'b000;
 	data_rec=3'b000;
 	Data_H_write=0;
+	Data_H_test=0;
 end
 
 assign Data_H = (Data_H_write==1) ? Data_H_REG : 1'bz;
@@ -30,6 +32,7 @@ wire FSDR_risingedge=(data_rec[2:1]==2'b01); // детектируем подъ�
 wire FSDR_fallingedge=(data_rec[2:1]==2'b10); // детектируем спад на шине данных
 
 always @(posedge clk1M) begin
+Data_H_test <= Data_H;
 	if(FFS_risingedge)begin
 	   Data_H_write=1;
 		mstate=1;

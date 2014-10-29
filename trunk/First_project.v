@@ -25,7 +25,8 @@ module First_project(input wire key0,
 							//input wire dev_state,
 			            //output wire clk1M_out,
 							inout wire Data_H,
-							output wire flag_five_sec
+							output wire flag_five_sec,
+							output wire Data_H_test
 							//output wire MISO1
 							     );
 	  wire [39:0]HYM2;
@@ -41,7 +42,7 @@ module First_project(input wire key0,
 	  stepdirdriver SDRV(STEP, DIR, STEP_OUT);
 	  Energy_saver  E_s(clk1hz,M_EN,STEP_OUT,OUT_final); 
 	  PWM           p_w_m(clk25M,byte_data_received,PWM_out,PWM_out2,PWM_out3,PWM_out4,PWM_out5,PWM_out6,PWM_out7,PWM_out8,PWM_out9,PWM_out_vent); 
-	  Humidity      Hum(clk1M,Data_H,flag_five_sec,HYM2);
+	  Humidity      Hum(clk1M,Data_H,flag_five_sec,HYM2,Data_H_test);
 	  five_sec      F_S(clk1M,flag_five_sec);
 	  
 	  
