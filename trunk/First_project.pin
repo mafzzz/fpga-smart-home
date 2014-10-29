@@ -131,9 +131,9 @@ RESERVED_INPUT               : 66        :        :                   :         
 RESERVED_INPUT               : 67        :        :                   :         : 2         :                
 RESERVED_INPUT               : 68        :        :                   :         : 2         :                
 RESERVED_INPUT               : 69        :        :                   :         : 2         :                
-RESERVED_INPUT               : 70        :        :                   :         : 2         :                
-RESERVED_INPUT               : 71        :        :                   :         : 2         :                
-RESERVED_INPUT               : 72        :        :                   :         : 2         :                
+mstate[2]                    : 70        : output : 3.3-V LVTTL       :         : 2         : Y              
+mstate[1]                    : 71        : output : 3.3-V LVTTL       :         : 2         : Y              
+mstate[0]                    : 72        : output : 3.3-V LVTTL       :         : 2         : Y              
 RESERVED_INPUT               : 73        :        :                   :         : 2         :                
 RESERVED_INPUT               : 74        :        :                   :         : 2         :                
 RESERVED_INPUT               : 75        :        :                   :         : 2         :                

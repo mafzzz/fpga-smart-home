@@ -52,24 +52,16 @@ set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
 set_location_assignment PIN_6 -to key0
 set_location_assignment PIN_2 -to led0
 set_location_assignment PIN_3 -to led1
-set_global_assignment -name VERILOG_FILE spi_slave.v
-set_global_assignment -name VERILOG_FILE First_project.v
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name VERILOG_FILE stepdirdriver.v
-set_global_assignment -name VERILOG_FILE freqdiv.v
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
-set_global_assignment -name VERILOG_FILE SETPOS.v
-set_global_assignment -name VERILOG_FILE relay.v
 set_location_assignment PIN_49 -to SCK
 set_location_assignment PIN_47 -to SSEL
 set_location_assignment PIN_48 -to MOSI
 set_location_assignment PIN_19 -to MISO
-set_global_assignment -name VERILOG_FILE Energy_saver.v
 set_location_assignment PIN_18 -to OUT_final[3]
 set_location_assignment PIN_17 -to OUT_final[2]
 set_location_assignment PIN_16 -to OUT_final[1]
 set_location_assignment PIN_15 -to OUT_final[0]
-set_global_assignment -name VERILOG_FILE PWM_Channel1.v
 set_location_assignment PIN_33 -to PWM_out
 set_location_assignment PIN_34 -to PWM_out2
 set_location_assignment PIN_35 -to PWM_out3
@@ -80,9 +72,7 @@ set_location_assignment PIN_26 -to PWM_out7
 set_location_assignment PIN_30 -to PWM_out8
 set_location_assignment PIN_50 -to PWM_out9
 set_location_assignment PIN_55 -to PWM_out_vent
-set_global_assignment -name VERILOG_FILE Humidity.v
 set_location_assignment PIN_28 -to Data_H
-set_global_assignment -name VERILOG_FILE five_sec.v
 set_location_assignment PIN_54 -to flag_five_sec
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
@@ -93,4 +83,19 @@ set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simula
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME First_project_vhd_tst -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/First_project.vht -section_id testbench
-set_global_assignment -name VERILOG_FILE First_project_test.v
+set_global_assignment -name VERILOG_FILE frqdiv.v
+set_global_assignment -name VERILOG_FILE spi_slave.v
+set_global_assignment -name VERILOG_FILE First_project.v
+set_global_assignment -name VERILOG_FILE stepdirdriver.v
+set_global_assignment -name VERILOG_FILE SETPOS.v
+set_global_assignment -name VERILOG_FILE relay.v
+set_global_assignment -name VERILOG_FILE Energy_saver.v
+set_global_assignment -name VERILOG_FILE PWM_Channel1.v
+set_global_assignment -name VERILOG_FILE Humidity.v
+set_global_assignment -name VERILOG_FILE five_sec.v
+set_location_assignment PIN_12 -to clk50M
+set_location_assignment PIN_56 -to Data_H_test
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Data_H
+set_location_assignment PIN_70 -to mstate[2]
+set_location_assignment PIN_71 -to mstate[1]
+set_location_assignment PIN_72 -to mstate[0]

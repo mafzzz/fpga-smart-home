@@ -1,5 +1,5 @@
 Analysis & Synthesis report for First_project
-Wed Sep 10 20:18:01 2014
+Wed Oct 29 23:36:17 2014
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Full Version
 
 
@@ -13,16 +13,15 @@ Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Full Versi
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |First_project|Humidity:Hum|mstate
-  9. Registers Removed During Synthesis
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Port Connectivity Checks: "Humidity:Hum"
- 14. Port Connectivity Checks: "SETPOS:STPS"
- 15. Port Connectivity Checks: "SPI_slave:SPI_MODULE"
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 13. Port Connectivity Checks: "SETPOS:STPS"
+ 14. Port Connectivity Checks: "SPI_slave:SPI_MODULE"
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,12 +47,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Sep 10 20:18:01 2014          ;
+; Analysis & Synthesis Status ; Successful - Wed Oct 29 23:36:17 2014          ;
 ; Quartus II 32-bit Version   ; 11.1 Build 216 11/23/2011 SP 1 SJ Full Version ;
 ; Revision Name               ; First_project                                  ;
 ; Top-level Entity Name       ; First_project                                  ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 516                                            ;
+; Total logic elements        ; 537                                            ;
 ; Total pins                  ; 28                                             ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
@@ -148,22 +147,22 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+
-; spi_slave.v                      ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/spi_slave.v     ;
-; First_project.v                  ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/First_project.v ;
-; stepdirdriver.v                  ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/stepdirdriver.v ;
-; freqdiv.v                        ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/freqdiv.v       ;
-; SETPOS.v                         ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/SETPOS.v        ;
-; relay.v                          ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/relay.v         ;
-; Energy_saver.v                   ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/Energy_saver.v  ;
-; PWM_Channel1.v                   ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/PWM_Channel1.v  ;
-; Humidity.v                       ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/Humidity.v      ;
-; five_sec.v                       ; yes             ; User Verilog HDL File  ; C:/CPLD project/CPLD project/five_sec.v      ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                      ;
++----------------------------------+-----------------+------------------------+-------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path  ;
++----------------------------------+-----------------+------------------------+-------------------------------+
+; frqdiv.v                         ; yes             ; User Verilog HDL File  ; I:/Smart_Home/frqdiv.v        ;
+; spi_slave.v                      ; yes             ; User Verilog HDL File  ; I:/Smart_Home/spi_slave.v     ;
+; First_project.v                  ; yes             ; User Verilog HDL File  ; I:/Smart_Home/First_project.v ;
+; stepdirdriver.v                  ; yes             ; User Verilog HDL File  ; I:/Smart_Home/stepdirdriver.v ;
+; SETPOS.v                         ; yes             ; User Verilog HDL File  ; I:/Smart_Home/SETPOS.v        ;
+; relay.v                          ; yes             ; User Verilog HDL File  ; I:/Smart_Home/relay.v         ;
+; Energy_saver.v                   ; yes             ; User Verilog HDL File  ; I:/Smart_Home/Energy_saver.v  ;
+; PWM_Channel1.v                   ; yes             ; User Verilog HDL File  ; I:/Smart_Home/PWM_Channel1.v  ;
+; Humidity.v                       ; yes             ; User Verilog HDL File  ; I:/Smart_Home/Humidity.v      ;
+; five_sec.v                       ; yes             ; User Verilog HDL File  ; I:/Smart_Home/five_sec.v      ;
++----------------------------------+-----------------+------------------------+-------------------------------+
 
 
 +------------------------------------------------------+
@@ -171,33 +170,33 @@ applicable agreement for further details.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Total logic elements                        ; 516    ;
-;     -- Combinational with no register       ; 282    ;
+; Total logic elements                        ; 537    ;
+;     -- Combinational with no register       ; 274    ;
 ;     -- Register only                        ; 141    ;
-;     -- Combinational with a register        ; 93     ;
+;     -- Combinational with a register        ; 122    ;
 ;                                             ;        ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 81     ;
-;     -- 3 input functions                    ; 188    ;
-;     -- 2 input functions                    ; 98     ;
+;     -- 4 input functions                    ; 69     ;
+;     -- 3 input functions                    ; 183    ;
+;     -- 2 input functions                    ; 136    ;
 ;     -- 1 input functions                    ; 8      ;
 ;     -- 0 input functions                    ; 0      ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 343    ;
+;     -- normal mode                          ; 364    ;
 ;     -- arithmetic mode                      ; 173    ;
 ;     -- qfbk mode                            ; 0      ;
 ;     -- register cascade mode                ; 0      ;
-;     -- synchronous clear/load mode          ; 16     ;
+;     -- synchronous clear/load mode          ; 17     ;
 ;     -- asynchronous clear/load mode         ; 0      ;
 ;                                             ;        ;
-; Total registers                             ; 234    ;
+; Total registers                             ; 263    ;
 ; Total logic cells in carry chains           ; 191    ;
 ; I/O pins                                    ; 28     ;
 ; Maximum fan-out node                        ; clk50M ;
-; Maximum fan-out                             ; 146    ;
-; Total fan-out                               ; 1651   ;
-; Average fan-out                             ; 3.03   ;
+; Maximum fan-out                             ; 177    ;
+; Total fan-out                               ; 1721   ;
+; Average fan-out                             ; 3.05   ;
 +---------------------------------------------+--------+
 
 
@@ -206,42 +205,73 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                 ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
-; |First_project             ; 516 (0)     ; 234          ; 0          ; 28   ; 0            ; 282 (0)      ; 141 (0)           ; 93 (0)           ; 191 (0)         ; 0 (0)      ; |First_project                      ; work         ;
+; |First_project             ; 537 (0)     ; 263          ; 0          ; 28   ; 0            ; 274 (0)      ; 141 (0)           ; 122 (0)          ; 191 (0)         ; 0 (0)      ; |First_project                      ; work         ;
 ;    |Energy_saver:E_s|      ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |First_project|Energy_saver:E_s     ; work         ;
-;    |Humidity:Hum|          ; 118 (118)   ; 34           ; 0          ; 0    ; 0            ; 84 (84)      ; 5 (5)             ; 29 (29)          ; 21 (21)         ; 0 (0)      ; |First_project|Humidity:Hum         ; work         ;
+;    |Humidity:Hum|          ; 109 (109)   ; 32           ; 0          ; 0    ; 0            ; 77 (77)      ; 5 (5)             ; 27 (27)          ; 21 (21)         ; 0 (0)      ; |First_project|Humidity:Hum         ; work         ;
 ;    |PWM:p_w_m|             ; 88 (88)     ; 8            ; 0          ; 0    ; 0            ; 80 (80)      ; 0 (0)             ; 8 (8)            ; 87 (87)         ; 0 (0)      ; |First_project|PWM:p_w_m            ; work         ;
 ;    |RELAY:RL|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |First_project|RELAY:RL             ; work         ;
 ;    |SETPOS:STPS|           ; 40 (40)     ; 14           ; 0          ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 14 (14)          ; 28 (28)         ; 0 (0)      ; |First_project|SETPOS:STPS          ; work         ;
-;    |SPI_slave:SPI_MODULE|  ; 106 (106)   ; 103          ; 0          ; 0    ; 0            ; 3 (3)        ; 95 (95)           ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |First_project|SPI_slave:SPI_MODULE ; work         ;
+;    |SPI_slave:SPI_MODULE|  ; 136 (136)   ; 134          ; 0          ; 0    ; 0            ; 2 (2)        ; 95 (95)           ; 39 (39)          ; 0 (0)           ; 0 (0)      ; |First_project|SPI_slave:SPI_MODULE ; work         ;
 ;    |five_sec:F_S|          ; 59 (59)     ; 24           ; 0          ; 0    ; 0            ; 35 (35)      ; 14 (14)           ; 10 (10)          ; 23 (23)         ; 0 (0)      ; |First_project|five_sec:F_S         ; work         ;
-;    |freqdiv:FGD|           ; 90 (90)     ; 43           ; 0          ; 0    ; 0            ; 47 (47)      ; 27 (27)           ; 16 (16)          ; 32 (32)         ; 0 (0)      ; |First_project|freqdiv:FGD          ; work         ;
+;    |frqdiv:FGD|            ; 90 (90)     ; 43           ; 0          ; 0    ; 0            ; 47 (47)      ; 27 (27)           ; 16 (16)          ; 32 (32)         ; 0 (0)      ; |First_project|frqdiv:FGD           ; work         ;
 ;    |stepdirdriver:SDRV|    ; 10 (10)     ; 8            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |First_project|stepdirdriver:SDRV   ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------+
-; State Machine - |First_project|Humidity:Hum|mstate ;
-+------------+------------+------------+-------------+
-; Name       ; mstate.000 ; mstate.010 ; mstate.001  ;
-+------------+------------+------------+-------------+
-; mstate.000 ; 0          ; 0          ; 0           ;
-; mstate.001 ; 1          ; 0          ; 1           ;
-; mstate.010 ; 1          ; 1          ; 0           ;
-+------------+------------+------------+-------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; Humidity:Hum|HYM2[14..18]              ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[13]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[12]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[11]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[10]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[9]                   ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[8]                   ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[7]                   ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[0,6]                 ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[5]                   ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[4]                   ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[3]                   ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[2]                   ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[1]                   ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[19,20]               ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[21]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[22]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[23]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[24]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[25]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[26]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[27]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[28]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[29]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[30]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[31]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[32]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[33]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[34]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[35]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[36]                  ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|HYM2[37]                  ; Stuck at VCC due to stuck port data_in ;
+; Humidity:Hum|HYM2[38,39]               ; Stuck at GND due to stuck port data_in ;
+; SPI_slave:SPI_MODULE|HYM_send[0]       ; Stuck at GND due to stuck port data_in ;
+; Humidity:Hum|mstate[2]                 ; Stuck at GND due to stuck port data_in ;
+; frqdiv:FGD|j[0]                        ; Merged with frqdiv:FGD|i[0]            ;
+; Total Number of Removed Registers = 43 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
-+----------------------------------------------------------------------+
-; Registers Removed During Synthesis                                   ;
-+---------------------------------------+------------------------------+
-; Register name                         ; Reason for Removal           ;
-+---------------------------------------+------------------------------+
-; Humidity:Hum|mstate~7                 ; Lost fanout                  ;
-; Humidity:Hum|mstate.000               ; Lost fanout                  ;
-; freqdiv:FGD|j[0]                      ; Merged with freqdiv:FGD|i[0] ;
-; Total Number of Removed Registers = 3 ;                              ;
-+---------------------------------------+------------------------------+
++-------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                               ;
++----------------------+---------------------------+----------------------------------------+
+; Register name        ; Reason for Removal        ; Registers Removed due to This Register ;
++----------------------+---------------------------+----------------------------------------+
+; Humidity:Hum|HYM2[0] ; Stuck at GND              ; SPI_slave:SPI_MODULE|HYM_send[0]       ;
+;                      ; due to stuck port data_in ;                                        ;
++----------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -249,12 +279,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 234   ;
+; Total registers                              ; 263   ;
 ; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Synchronous Load   ; 17    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 120   ;
+; Number of registers using Clock Enable       ; 149   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -265,30 +295,21 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; five_sec:F_S|flag_five_sec             ; 3       ;
-; Humidity:Hum|Data_H_REG~en             ; 2       ;
-; Total number of inverted registers = 2 ;         ;
+; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                      ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------+----------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; |First_project|SPI_slave:SPI_MODULE|HYM_send[6] ;                            ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; |First_project|SETPOS:STPS|angle_current[2]     ;                            ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; |First_project|stepdirdriver:SDRV|OUT[0]        ;                            ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; |First_project|Humidity:Hum|shet[15]            ;                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------+----------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Humidity:Hum"                                                                                                             ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                   ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-; HYM2 ; Output ; Warning  ; Output or bidir port (40 bits) is wider than the port expression (1 bits) it drives; bit(s) "HYM2[39..1]" have no fanouts ;
-+------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                       ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------+----------------------------+
+; 3:1                ; 38 bits   ; 76 LEs        ; 38 LEs               ; 38 LEs                 ; |First_project|SPI_slave:SPI_MODULE|HYM_send[25] ;                            ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; |First_project|SETPOS:STPS|angle_current[2]      ;                            ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; |First_project|stepdirdriver:SDRV|OUT[3]         ;                            ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; |First_project|Humidity:Hum|shet[5]              ;                            ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 6 LEs                ; 15 LEs                 ; |First_project|Humidity:Hum|mstate[0]            ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------+----------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -315,18 +336,17 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Sep 10 20:18:00 2014
+    Info: Processing started: Wed Oct 29 23:36:15 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off First_project -c First_project
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file frqdiv.v
+    Info (12023): Found entity 1: frqdiv
 Info (12021): Found 1 design units, including 1 entities, in source file spi_slave.v
     Info (12023): Found entity 1: SPI_slave
 Info (12021): Found 1 design units, including 1 entities, in source file first_project.v
     Info (12023): Found entity 1: First_project
 Info (12021): Found 1 design units, including 1 entities, in source file stepdirdriver.v
     Info (12023): Found entity 1: stepdirdriver
-Warning (12090): Entity "freqdiv" obtained from "freqdiv.v" instead of from Quartus II megafunction library
-Info (12021): Found 1 design units, including 1 entities, in source file freqdiv.v
-    Info (12023): Found entity 1: freqdiv
 Info (12021): Found 1 design units, including 1 entities, in source file setpos.v
     Info (12023): Found entity 1: SETPOS
 Info (12021): Found 1 design units, including 1 entities, in source file relay.v
@@ -339,88 +359,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file humidit
     Info (12023): Found entity 1: Humidity
 Info (12021): Found 1 design units, including 1 entities, in source file five_sec.v
     Info (12023): Found entity 1: five_sec
-Info (12021): Found 1 design units, including 1 entities, in source file first_project_test.v
-    Info (12023): Found entity 1: First_project_test
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(34): created implicit net for "LED"
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(34): created implicit net for "HYM2"
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(35): created implicit net for "clk1hz"
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(35): created implicit net for "clk25M"
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(35): created implicit net for "clk1M"
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(36): created implicit net for "WR"
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(36): created implicit net for "M_EN"
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(36): created implicit net for "DIR"
-Warning (10236): Verilog HDL Implicit Net warning at First_project.v(37): created implicit net for "STEP"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "key0"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "led0"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "led1"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "SCK"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "MOSI"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "MISO"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "SSEL"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "OUT"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(5): created implicit net for "OUT_final"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out2"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out3"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out4"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out5"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out6"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out7"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out8"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out9"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(6): created implicit net for "PWM_out_vent"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(7): created implicit net for "clk1M_out"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(7): created implicit net for "Data_H"
-Warning (10236): Verilog HDL Implicit Net warning at First_project_test.v(7): created implicit net for "flag_five_sec"
 Info (12127): Elaborating entity "First_project" for the top level hierarchy
+Warning (10034): Output port "Data_H_test" at First_project.v(29) has no driver
 Info (12128): Elaborating entity "SPI_slave" for hierarchy "SPI_slave:SPI_MODULE"
 Warning (10036): Verilog HDL or VHDL warning at spi_slave.v(15): object "SCK_fallingedge" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at spi_slave.v(20): object "SSEL_startmessage" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at spi_slave.v(21): object "SSEL_endmessage" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at spi_slave.v(29): object "bit_cntr" assigned a value but never read
 Warning (10034): Output port "LED" at spi_slave.v(6) has no driver
-Info (12128): Elaborating entity "freqdiv" for hierarchy "freqdiv:FGD"
-Warning (10230): Verilog HDL assignment warning at freqdiv.v(28): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at freqdiv.v(35): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "frqdiv" for hierarchy "frqdiv:FGD"
 Info (12128): Elaborating entity "SETPOS" for hierarchy "SETPOS:STPS"
-Warning (10230): Verilog HDL assignment warning at SETPOS.v(18): truncated value with size 32 to match size of target (11)
 Info (12128): Elaborating entity "RELAY" for hierarchy "RELAY:RL"
 Info (12128): Elaborating entity "stepdirdriver" for hierarchy "stepdirdriver:SDRV"
 Info (12128): Elaborating entity "Energy_saver" for hierarchy "Energy_saver:E_s"
 Info (12128): Elaborating entity "PWM" for hierarchy "PWM:p_w_m"
 Info (12128): Elaborating entity "Humidity" for hierarchy "Humidity:Hum"
-Warning (10036): Verilog HDL or VHDL warning at Humidity.v(11): object "gorb" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at Humidity.v(48): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at Humidity.v(52): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at Humidity.v(56): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at Humidity.v(62): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at Humidity.v(71): truncated value with size 32 to match size of target (6)
-Warning (10230): Verilog HDL assignment warning at Humidity.v(92): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "five_sec" for hierarchy "five_sec:F_S"
-Warning (10230): Verilog HDL assignment warning at five_sec.v(19): truncated value with size 32 to match size of target (23)
-Warning (10230): Verilog HDL assignment warning at five_sec.v(21): truncated value with size 32 to match size of target (23)
 Info (13005): Duplicate registers merged to single register
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "Humidity:Hum|Data_H_REG" to the node "Humidity:Hum|data_rec[0]" into an OR gate
-Info (17049): 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
-    Info (17050): Register "Humidity:Hum|mstate~7" lost all its fanouts during netlist optimizations.
-    Info (17050): Register "Humidity:Hum|mstate.000" lost all its fanouts during netlist optimizations.
-Info (21057): Implemented 544 device resources after synthesis - the final resource count might be different
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Data_H_test" is stuck at GND
+    Warning (13410): Pin "mstate[2]" is stuck at GND
+Info (21057): Implemented 565 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 516 logic cells
-Info (144001): Generated suppressed messages file C:/CPLD project/CPLD project/First_project.map.smsg
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info (21059): Implemented 22 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 537 logic cells
+Info (144001): Generated suppressed messages file I:/Smart_Home/First_project.map.smsg
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 283 megabytes
-    Info: Processing ended: Wed Sep 10 20:18:01 2014
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Wed Oct 29 23:36:17 2014
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/CPLD project/CPLD project/First_project.map.smsg.
+The suppressed messages can be found in I:/Smart_Home/First_project.map.smsg.
 
 
