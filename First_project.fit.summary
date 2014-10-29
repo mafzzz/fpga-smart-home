@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Sep 10 20:18:04 2014
+Fitter Status : Successful - Wed Oct 29 23:36:19 2014
 Quartus II 32-bit Version : 11.1 Build 216 11/23/2011 SP 1 SJ Full Version
 Revision Name : First_project
 Top-level Entity Name : First_project
 Family : MAX II
 Device : EPM570T100C5
 Timing Models : Final
-Total logic elements : 493 / 570 ( 86 % )
+Total logic elements : 516 / 570 ( 91 % )
 Total pins : 28 / 76 ( 37 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

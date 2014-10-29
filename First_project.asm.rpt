@@ -1,5 +1,5 @@
 Assembler report for First_project
-Wed Sep 10 20:18:06 2014
+Wed Oct 29 23:36:20 2014
 Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Full Version
 
 
@@ -10,7 +10,7 @@ Quartus II 32-bit Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Full Versi
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/CPLD project/CPLD project/First_project.pof
+  5. Assembler Device Options: I:/Smart_Home/First_project.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Sep 10 20:18:06 2014 ;
+; Assembler Status      ; Successful - Wed Oct 29 23:36:20 2014 ;
 ; Revision Name         ; First_project                         ;
 ; Top-level Entity Name ; First_project                         ;
 ; Family                ; MAX II                                ;
@@ -75,24 +75,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+-----------+---------------+
 
 
-+------------------------------------------------+
-; Assembler Generated Files                      ;
-+------------------------------------------------+
-; File Name                                      ;
-+------------------------------------------------+
-; C:/CPLD project/CPLD project/First_project.pof ;
-+------------------------------------------------+
++---------------------------------+
+; Assembler Generated Files       ;
++---------------------------------+
+; File Name                       ;
++---------------------------------+
+; I:/Smart_Home/First_project.pof ;
++---------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Assembler Device Options: C:/CPLD project/CPLD project/First_project.pof ;
-+----------------+---------------------------------------------------------+
-; Option         ; Setting                                                 ;
-+----------------+---------------------------------------------------------+
-; Device         ; EPM570T100C5                                            ;
-; JTAG usercode  ; 0xFFFFFFFF                                              ;
-; Checksum       ; 0x002F11F0                                              ;
-+----------------+---------------------------------------------------------+
++-----------------------------------------------------------+
+; Assembler Device Options: I:/Smart_Home/First_project.pof ;
++----------------+------------------------------------------+
+; Option         ; Setting                                  ;
++----------------+------------------------------------------+
+; Device         ; EPM570T100C5                             ;
+; JTAG usercode  ; 0xFFFFFFFF                               ;
+; Checksum       ; 0x002F1E46                               ;
++----------------+------------------------------------------+
 
 
 +--------------------+
@@ -101,13 +101,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 11.1 Build 216 11/23/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Sep 10 20:18:06 2014
+    Info: Processing started: Wed Oct 29 23:36:20 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off First_project -c First_project
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 262 megabytes
-    Info: Processing ended: Wed Sep 10 20:18:06 2014
+    Info: Processing ended: Wed Oct 29 23:36:20 2014
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
