@@ -40,25 +40,17 @@ begin
   begin
   bitcnt<=7'b0000000;
   HYM_send<=HYM2; // помещаем данные из вектора входа в регистр если передача по спи не активна.
-  //HYM_send_test<=39'b010101010101010101010101010101010101010;
    end else if(SCK_risingedge)
 				begin
 				bitcnt<=bitcnt+7'b0000001;
-				// implement a shift-left register (since we receive the data MSB first)
 				byte_data_received <= {byte_data_received[86:0], MOSI_data}; 
-				//HYM_send_test<=HYM_send_test<<1;
+				if (bitcnt>7'b01011000) begin
 				HYM_send<=HYM_send<<1;
+				end
 				end 
 end
 
-/*
-always @(posedge clk)
-begin
-if(SSEL==1) begin HYM_send<=HYM2; // помещаем данные из вектора входа в регистр если передача по спи не активна.
-end else if (SCK_risingedge==1) begin HYM_send_test<=HYM_send_test>>1;
-end
-end 
-*/
+
 
 assign MISO=HYM_send[39];
 
