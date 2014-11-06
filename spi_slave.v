@@ -31,8 +31,8 @@ reg [3:0] bit_cntr=7;
 reg byte_received;  // high when a byte has been received
 reg [7:0] cnt;
 reg [39:0] HYM_send; // регистр куда помещаем инфу влажности с вектора входа, его и будем смещать при передаче.
-//reg [39:0] HYM_send_test;
-//initial HYM_send_test=39'b010101010101010101010101010101010101010;
+reg [39:0] HYM_send_test;
+initial HYM_send_test=40'b1111010101010101010101010101010101010101;
 
 always @(posedge clk)
 begin
@@ -44,10 +44,9 @@ begin
 				begin
 				bitcnt<=bitcnt+7'b0000001;
 				byte_data_received <= {byte_data_received[86:0], MOSI_data}; 
-				if (bitcnt>7'b01011000) begin
+				end else if(SCK_fallingedge)begin
 				HYM_send<=HYM_send<<1;
 				end
-				end 
 end
 
 
