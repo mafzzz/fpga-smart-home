@@ -9,32 +9,35 @@ reg [2:0] j;
 reg [5:0] z;
 
 initial begin
-	i=0;
-	j=0;
-	z=0;
-	clk1hz=0;
-	clk25M=0;
-	clk1M=0;
+	i<=0;
+	j<=0;
+	z<=0;
+	clk1hz<=0;
+	clk25M<=0;
+	clk1M<=0;
 end
 
 always@(posedge clk50M) begin
-	i=i+1;
 	if (i == 50000) begin
-		clk1hz = ~clk1hz;
-		i=0;
+		clk1hz <= ~clk1hz;
+		i<=0;
+	end else begin
+		i<=i+1;
 	end
 
-	j=j+1'b1;
 	if (j == 2) begin
-		clk25M = ~clk25M;
-		j=0;
+		clk25M <= ~clk25M;
+		j<=0;
+	end else begin
+		j<=j+1'b1;
 	end
 
-	z=z+1'b1;
 	if (z == 25) begin
-		clk1M = ~clk1M;
-		z=0;
-	end	
+		clk1M <= ~clk1M;
+		z<=0;
+	end else begin
+		z<=z+1'b1;
+	end
 end
 
 endmodule

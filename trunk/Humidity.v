@@ -46,7 +46,6 @@ always @(posedge clk1M) begin
 		shet<=16'd0;
 		id_gorb<=6'b000000;
 		HYM  <= 40'b0;
-		HYM2 <= 40'b0;
 	end else begin
 		if (mstate==1) begin// приветствие от плис к датчику
 		

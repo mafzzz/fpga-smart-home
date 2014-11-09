@@ -18,7 +18,7 @@ wire SCK_fallingedge = (SCKr[2:1]==2'b10);  // and falling edges
 reg [2:0] SSELr;  always @(posedge clk) SSELr <= {SSELr[1:0], SSEL};
 wire SSEL_active = ~SSELr[1];  // SSEL is active low
 wire SSEL_startmessage = (SSELr[2:1]==2'b10);  // message starts at falling edge
-wire SSEL_endmessage = (SSELr[2:1]==2'b01);  // message stops at rising edge
+//wire SSEL_endmessage = (SSELr[2:1]==2'b01);  // message stops at rising edge
 
 // and for MOSI
 reg [1:0] MOSIr;  always @(posedge clk) MOSIr <= {MOSIr[0], MOSI};
@@ -26,13 +26,10 @@ wire MOSI_data = MOSIr[1];
 
 // we handle SPI in 87-bits format, so we need a 7 bits counter to count the bits as they come in
 reg [6:0] bitcnt;
-reg [3:0] bit_cntr=7;
 
 reg byte_received;  // high when a byte has been received
 reg [7:0] cnt;
 reg [39:0] HYM_send; // регистр куда помещаем инфу влажности с вектора входа, его и будем смещать при передаче.
-reg [39:0] HYM_send_test;
-initial HYM_send_test=40'b1111010101010101010101010101010101010101;
 
 always @(posedge clk)
 begin
