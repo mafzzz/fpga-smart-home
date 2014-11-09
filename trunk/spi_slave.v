@@ -36,21 +36,29 @@ initial HYM_send_test=40'b1111010101010101010101010101010101010101;
 
 always @(posedge clk)
 begin
-  if(~SSEL_active)
-  begin
-  bitcnt<=7'b0000000;
-  HYM_send<=HYM2; // помещаем данные из вектора входа в регистр если передача по спи не активна.
-   end else if(SCK_risingedge)
-				begin
-				bitcnt<=bitcnt+7'b0000001;
-				byte_data_received <= {byte_data_received[86:0], MOSI_data}; 
-				end else if(SCK_fallingedge)begin
-				HYM_send<=HYM_send<<1;
-				end
+	if(~SSEL_active) begin
+		bitcnt<=7'b0000000;
+   end else begin
+		if(SCK_risingedge) begin
+			bitcnt<=bitcnt+7'b0000001;
+			byte_data_received <= {byte_data_received[86:0], MOSI_data}; 
+		end
+	end
 end
 
+always @(posedge clk)
+begin
+	if (SSEL_active) begin
+		if(SSEL_startmessage) begin
+			HYM_send<=HYM2; // помещаем данные из вектора входа в регистр если передача по спи не активна.
+		end else begin
+			if(SCK_fallingedge)begin
+				HYM_send<=HYM_send<<1;
+			end
+		end
+	end
+end
 
-
-assign MISO=HYM_send[39];
+assign MISO=HYM_send[39:39];
 
 endmodule
